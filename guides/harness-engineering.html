@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harness Engineering, spiegato bene — Claude & Claude Code | Giorgio Gnoli</title>
+<meta name="description" content="Le tre ere dell'ingneria dell'AI e le cinque parti che trasformano un chatbot in un lavoratore: prompt, contesto, strumenti, loop di controllo, osservabilità.">
+<meta name="author" content="Giorgio Gnoli">
+<meta name="keywords" content="Claude, Claude Code, Architetture, guida italiana, Giorgio Gnoli">
+<link rel="canonical" href="https://claude.giorgiognoli.it/guides/harness-engineering.html">
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+
+<header class="site">
+ <div class="wrap">
+  <a class="brand" href="../index.html">
+   <span class="logo">G</span><span>Claude &amp; Claude Code · Repository</span>
+  </a>
+  <nav class="primary" aria-label="Navigazione principale">
+   <ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../archivio.html">Archivio</a></li>
+    <li><a href="../categorie/index.html">Categorie</a></li>
+    <li><a href="../chi-sono.html">Chi sono</a></li>
+   </ul>
+  </nav>
+  <a class="cta" href="../archivio.html">Archivio →</a>
+ </div>
+</header>
+
+<section class="category-cover">
+ <div class="wrap">
+  <p class="breadcrumb"><a href="../index.html">Home</a> / <a href="../archivio.html">Archivio</a> / <a href="../categorie/index.html">Categorie</a> / <a href="../categorie/architetture.html">Architetture</a></p>
+  <p class="kicker">Architetture</p>
+  <h1>Harness Engineering, spiegato bene</h1>
+  <p class="lead">Le tre ere dell'ingneria dell'AI e le cinque parti che trasformano un chatbot in un lavoratore: prompt, contesto, strumenti, loop di controllo, osservabilità.</p>
+  <p class="meta">A cura di Giorgio Gnoli · Guida operativa, licenza libera con attribuzione.</p>
+ </div>
+</section>
+
+<section>
+ <div class="wrap layout">
+  <article class="guide">
+   <p>Cos'è un harness|Un harness è l'insieme di tutte le componenti software che stanno intorno a un modello per farlo lavorare su un task reale. Senza harness Claude è un chatbot brillante, con il harness diventa un lavoratore. Il termine è diventato di uso comune nel 2025: Anthropic, OpenAI e molti progetti open source pubblicano i propri harness come riferimento.|Le tre ere dell'ingegneria AI|Era 1. Prompt Engineering (2022-2023). I modelli sono deboli, conta la forma del prompt. Era 2. Context Engineering (2024). Modelli più capaci, il collo di bottiglia è la qualità del contesto: documenti, memoria, strumenti. Era 3. Harness Engineering (2025-). Modelli potenti, il collo di bottiglia è l'architettura del sistema che li guida.|Le cinque parti|1. Modello. La scelta del modello: Claude Sonnet per task complessi, Haiku per task ripetitivi, Opus per ragionamento profondo. 2. Contesto. Cosa entra nella finestra di input: istruzioni di sistema, esempi, documenti, memoria, strumenti disponibili. 3. Strumenti. Le capability esterne: function calling, MCP, esecuzione di codice, file system, browser. 4. Loop di controllo. La pipeline di esecuzione: ricevi task → pianifica → esegui → verifica → correggi → riporta. 5. Osservabilità. Log strutturati, metriche di successo, tracciamento delle decisioni. Senza osservabilità non sai se l'agente sta peggiorando.|Come si progetta un harness|Claude Code è un esempio di harness Anthropic-ready. Cowork OS è un harness desktop-oriented. La tua Skill è un mini-harness verticale. Combinando Skills più grandi, MCP server e memoria ottieni un harness su misura per il tuo dominio.|Regola d'oro|Un harness è un prodotto software: va versionato, testato, distribuito. Non credere di averlo finito dopo la prima scrittura: il miglioramento è continuo.</p>
+   <hr style="margin-top:2em;border:0;border-top:1px solid var(--border)">
+   <p style="color:var(--muted);font-size:.9rem">Hai trovato utile questa guida? Torna all'<a href="../archivio.html">archivio completo</a> o naviga per <a href="../categorie/index.html">categoria</a>.</p>
+  </article>
+  <aside class="toc">
+   <h4>Indice</h4>
+   
+   <h4 style="margin-top:14px">Categoria</h4>
+   <a href="../categorie/architetture.html">Architetture</a>
+   <h4 style="margin-top:14px">Altre guide</h4>
+   <a href="../archivio.html">Archivio</a>
+   <a href="../index.html">Home</a>
+  </aside>
+ </div>
+</section>
+
+<footer class="site">
+ <div class="wrap">
+  <div>
+   <strong>Claude &amp; Claude Code · Repository Italiano</strong><br>
+   Curato da <span class="signature">Giorgio Gnoli</span> · Tutti i contenuti sono originali o rielaborati con attribuzione alle fonti originali.
+  </div>
+  <div>
+   <a href="../chi-sono.html">Chi sono</a> ·
+   <a href="../archivio.html">Archivio</a> ·
+   <a href="../categorie/index.html">Categorie</a>
+  </div>
+ </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

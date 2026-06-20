@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hacks per il limite di token — Claude & Claude Code | Giorgio Gnoli</title>
+<meta name="description" content="Tecniche per ridurre il consumo di token su input e output senza perdere qualità delle risposte.">
+<meta name="author" content="Giorgio Gnoli">
+<meta name="keywords" content="Claude, Claude Code, Prompt, guida italiana, Giorgio Gnoli">
+<link rel="canonical" href="https://claude.giorgiognoli.it/guides/token-limit-hacks.html">
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+
+<header class="site">
+ <div class="wrap">
+  <a class="brand" href="../index.html">
+   <span class="logo">G</span><span>Claude &amp; Claude Code · Repository</span>
+  </a>
+  <nav class="primary" aria-label="Navigazione principale">
+   <ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../archivio.html">Archivio</a></li>
+    <li><a href="../categorie/index.html">Categorie</a></li>
+    <li><a href="../chi-sono.html">Chi sono</a></li>
+   </ul>
+  </nav>
+  <a class="cta" href="../archivio.html">Archivio →</a>
+ </div>
+</header>
+
+<section class="category-cover">
+ <div class="wrap">
+  <p class="breadcrumb"><a href="../index.html">Home</a> / <a href="../archivio.html">Archivio</a> / <a href="../categorie/index.html">Categorie</a> / <a href="../categorie/prompt.html">Prompt</a></p>
+  <p class="kicker">Prompt</p>
+  <h1>Hacks per il limite di token</h1>
+  <p class="lead">Tecniche per ridurre il consumo di token su input e output senza perdere qualità delle risposte.</p>
+  <p class="meta">A cura di Giorgio Gnoli · Guida operativa, licenza libera con attribuzione.</p>
+ </div>
+</section>
+
+<section>
+ <div class="wrap layout">
+  <article class="guide">
+   <p>Perché è importante|Ogni dollaro speso per token è un dollaro non speso per altro. Risparmiare il 30% di token senza calo di qualità significa ridurre i costi operativi di un terzo.|Hack input|1. Markdown invece di JSON quando possibile (più compatto). 2. Elimina boilerplate come 'Gentile AI, per favore'. 3. Usa istruzioni in elenco numerato, non discorsive. 4. Specifica la lunghezza output ('max 200 parole'). 5. Rimuovi esempi inutili dal system prompt. 6. Comprimi il contesto: invece di dieci documenti, riassumi i cinque più rilevanti.|Hack output|1. Chiedi risposte corte. 2. Chiedi formati strutturati: tabelle, JSON, elenchi. 3. Evita 'spiega in dettaglio': meglio 'rispondi in 5 punti'. 4. Usa `temperature` bassa per task ripetitivi. 5. Limita `max_tokens` se il caso d'uso lo permette.|Hack di sessione|1. `/compact` ogni 30 minuti. 2. `/clear` quando cambi task. 3. `cache_control` per prompt riutilizzati. 4. Sub-agent per task indipendenti, non una sessione unica lunghissima.|Misurazione|Stima token con `tiktoken` Python. Prima/dopo un hack, misura. Tiene solo ciò che funziona davvero.|Limiti|Non lesinare su qualità dove serve. Un report finanziario superficiale perché 'risparmiamo token' non è un risparmio, è un danno.</p>
+   <hr style="margin-top:2em;border:0;border-top:1px solid var(--border)">
+   <p style="color:var(--muted);font-size:.9rem">Hai trovato utile questa guida? Torna all'<a href="../archivio.html">archivio completo</a> o naviga per <a href="../categorie/index.html">categoria</a>.</p>
+  </article>
+  <aside class="toc">
+   <h4>Indice</h4>
+   
+   <h4 style="margin-top:14px">Categoria</h4>
+   <a href="../categorie/prompt.html">Prompt</a>
+   <h4 style="margin-top:14px">Altre guide</h4>
+   <a href="../archivio.html">Archivio</a>
+   <a href="../index.html">Home</a>
+  </aside>
+ </div>
+</section>
+
+<footer class="site">
+ <div class="wrap">
+  <div>
+   <strong>Claude &amp; Claude Code · Repository Italiano</strong><br>
+   Curato da <span class="signature">Giorgio Gnoli</span> · Tutti i contenuti sono originali o rielaborati con attribuzione alle fonti originali.
+  </div>
+  <div>
+   <a href="../chi-sono.html">Chi sono</a> ·
+   <a href="../archivio.html">Archivio</a> ·
+   <a href="../categorie/index.html">Categorie</a>
+  </div>
+ </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
