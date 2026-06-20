@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Apify per Claude: scraping legale e ripetibile — Claude & Claude Code | Giorgio Gnoli</title>
-<meta name="description" content="Recuperare dati pubblici dal web dentro Claude tramite Apify MCP, in modo legale, etico e ripetibile.">
+<meta name="description" content="Recuperare dati pubblici dal web dentro Claude tramite Apify MCP, in modo legale, etico, ripetibile.">
 <meta name="author" content="Giorgio Gnoli">
-<meta name="keywords" content="Claude, Claude Code, Setup, guida italiana, Giorgio Gnoli">
-<link rel="canonical" href="https://claude.giorgiognoli.it/guides/apify-claude.html">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://giorgiognoli1.github.io/claude-repository-it/guides/apify-claude.html">
 <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
@@ -32,27 +32,49 @@
 <section class="category-cover">
  <div class="wrap">
   <p class="breadcrumb"><a href="../index.html">Home</a> / <a href="../archivio.html">Archivio</a> / <a href="../categorie/index.html">Categorie</a> / <a href="../categorie/setup.html">Setup</a></p>
-  <p class="kicker">Setup</p>
+  <p class="kicker">Setup · Guida operativa</p>
   <h1>Apify per Claude: scraping legale e ripetibile</h1>
-  <p class="lead">Recuperare dati pubblici dal web dentro Claude tramite Apify MCP, in modo legale, etico e ripetibile.</p>
-  <p class="meta">A cura di Giorgio Gnoli · Guida operativa, licenza libera con attribuzione.</p>
+  <p class="lead">Recuperare dati pubblici dal web dentro Claude tramite Apify MCP, in modo legale, etico, ripetibile.</p>
+  <p class="meta-line">A cura di Giorgio Gnoli · 7 sezioni</p>
  </div>
 </section>
 
 <section>
  <div class="wrap layout">
   <article class="guide">
-   <p>Cos'è Apify|Apify è una piattaforma di web scraping con migliaia di 'Actor' pronti (mini-script specializzati). La versione cloud è gestita, legale (rispetta robots.txt), a norma GDPR.|Perché integrarlo con Claude|Claude può orchestrare Actor Apify: chiedere titoli di prodotto Amazon, prezzi su eBay, post LinkedIn di un profilo, recensioni di un ristorante. Il workflow diventia un agente ripetibile.|Setup|Crea account su apify.com. Ottieni API token. Aggiungi Apify MCP al `claude_desktop_config.json`:|Codice di config|```json<br>{<br>  "mcpServers": {<br>    "apify": {"command": "npx", "args": ["-y", "@apify/mcp-server"], "env": {"APIFY_TOKEN": "tuotoken"}}<br>  }<br>}</p>
-   <hr style="margin-top:2em;border:0;border-top:1px solid var(--border)">
-   <p style="color:var(--muted);font-size:.9rem">Hai trovato utile questa guida? Torna all'<a href="../archivio.html">archivio completo</a> o naviga per <a href="../categorie/index.html">categoria</a>.</p>
+<h2 id="sec-lead">Sintesi</h2>
+<p class="lead">Recuperare dati pubblici dal web dentro Claude tramite Apify MCP, in modo legale, etico, ripetibile.</p>
+<h2 id="definizione">Cos’è Apify</h2>
+<p>Apify è una piattaforma di web scraping con migliaia di Actor pronti, mini-script specializzati. La versione cloud è gestita, legale (rispetta robots.txt), a norma GDPR.</p>
+<h2 id="integrarlo">Perché integrarlo con Claude</h2>
+<p>Claude può orchestrare Actor Apify: chiedere titoli di prodotto Amazon, prezzi su eBay, post LinkedIn di un profilo, recensioni di un ristorante. Il workflow diventa un agente ripetibile.</p>
+<h2 id="setup">Setup</h2>
+<ol><li>Crea un account su apify.com.</li><li>Ottieni un API token dal dashboard.</li><li>Aggiungi Apify MCP al claude_desktop_config.json.</li><li>Riavvia Claude Desktop.</li></ol>
+<h2 id="configurazione">File di configurazione</h2>
+<pre><code>{
+  "mcpServers": {
+    "apify": {
+      "command": "npx",
+      "args": ["-y", "@apify/mcp-server"],
+      "env": {"APIFY_TOKEN": "tuotoken"}
+    }
+  }
+}</code></pre>
+<h2 id="uso">Esempio di uso</h2>
+<p>Claude prompt: Estrai le prime dieci recensioni di questo ristorante su Google Maps e riassumi il sentiment. Claude lancia l’Actor google-maps-scraper, riceve JSON, lo riassume in linguaggio naturale.</p>
+<h2 id="etica">Limiti etici</h2>
+<ul><li>Non scrapeare siti con login obbligatorio o che vietano lo scraping nei ToS.</li><li>Non pubblicare dati personali.</li><li>Rispetta i rate limit.</li></ul>
+<h2 id="costi">Costi</h2>
+<p>Apify ha un free tier di cinque dollari al mese. Per uso più intensivo esistono piani da 49 dollari al mese con Actor illimitati.</p>
+<hr>
+<p class="foot-link">Hai trovato utile questa guida? Torna all'<a href="../archivio.html">archivio completo</a> o naviga per <a href="../categorie/index.html">categoria</a>.</p>
   </article>
   <aside class="toc">
-   <h4>Indice</h4>
-   
-   <h4 style="margin-top:14px">Categoria</h4>
+   <h4>In questa guida</h4><a href="#sec-lead">Sintesi</a><a href="#definizione">Cos’è Apify</a><a href="#integrarlo">Perché integrarlo con Claude</a><a href="#setup">Setup</a><a href="#configurazione">File di configurazione</a><a href="#uso">Esempio di uso</a><a href="#etica">Limiti etici</a><a href="#costi">Costi</a>
+   <h4 style="margin-top:18px">Categoria</h4>
    <a href="../categorie/setup.html">Setup</a>
-   <h4 style="margin-top:14px">Altre guide</h4>
-   <a href="../archivio.html">Archivio</a>
+   <h4 style="margin-top:18px">Naviga</h4>
+   <a href="../archivio.html">Archivio completo</a>
    <a href="../index.html">Home</a>
   </aside>
  </div>

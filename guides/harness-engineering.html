@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Harness Engineering, spiegato bene — Claude & Claude Code | Giorgio Gnoli</title>
-<meta name="description" content="Le tre ere dell'ingneria dell'AI e le cinque parti che trasformano un chatbot in un lavoratore: prompt, contesto, strumenti, loop di controllo, osservabilità.">
+<meta name="description" content="Le tre ere dell’ingegneria dell’AI e le cinque parti che trasformano un chatbot in un lavoratore: modello, contesto, strumenti, loop, osservabilità.">
 <meta name="author" content="Giorgio Gnoli">
-<meta name="keywords" content="Claude, Claude Code, Architetture, guida italiana, Giorgio Gnoli">
-<link rel="canonical" href="https://claude.giorgiognoli.it/guides/harness-engineering.html">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://giorgiognoli1.github.io/claude-repository-it/guides/harness-engineering.html">
 <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
@@ -32,27 +32,36 @@
 <section class="category-cover">
  <div class="wrap">
   <p class="breadcrumb"><a href="../index.html">Home</a> / <a href="../archivio.html">Archivio</a> / <a href="../categorie/index.html">Categorie</a> / <a href="../categorie/architetture.html">Architetture</a></p>
-  <p class="kicker">Architetture</p>
+  <p class="kicker">Architetture · Guida operativa</p>
   <h1>Harness Engineering, spiegato bene</h1>
-  <p class="lead">Le tre ere dell'ingneria dell'AI e le cinque parti che trasformano un chatbot in un lavoratore: prompt, contesto, strumenti, loop di controllo, osservabilità.</p>
-  <p class="meta">A cura di Giorgio Gnoli · Guida operativa, licenza libera con attribuzione.</p>
+  <p class="lead">Le tre ere dell’ingegneria dell’AI e le cinque parti che trasformano un chatbot in un lavoratore: modello, contesto, strumenti, loop, osservabilità.</p>
+  <p class="meta-line">A cura di Giorgio Gnoli · 4 sezioni</p>
  </div>
 </section>
 
 <section>
  <div class="wrap layout">
   <article class="guide">
-   <p>Cos'è un harness|Un harness è l'insieme di tutte le componenti software che stanno intorno a un modello per farlo lavorare su un task reale. Senza harness Claude è un chatbot brillante, con il harness diventa un lavoratore. Il termine è diventato di uso comune nel 2025: Anthropic, OpenAI e molti progetti open source pubblicano i propri harness come riferimento.|Le tre ere dell'ingegneria AI|Era 1. Prompt Engineering (2022-2023). I modelli sono deboli, conta la forma del prompt. Era 2. Context Engineering (2024). Modelli più capaci, il collo di bottiglia è la qualità del contesto: documenti, memoria, strumenti. Era 3. Harness Engineering (2025-). Modelli potenti, il collo di bottiglia è l'architettura del sistema che li guida.|Le cinque parti|1. Modello. La scelta del modello: Claude Sonnet per task complessi, Haiku per task ripetitivi, Opus per ragionamento profondo. 2. Contesto. Cosa entra nella finestra di input: istruzioni di sistema, esempi, documenti, memoria, strumenti disponibili. 3. Strumenti. Le capability esterne: function calling, MCP, esecuzione di codice, file system, browser. 4. Loop di controllo. La pipeline di esecuzione: ricevi task → pianifica → esegui → verifica → correggi → riporta. 5. Osservabilità. Log strutturati, metriche di successo, tracciamento delle decisioni. Senza osservabilità non sai se l'agente sta peggiorando.|Come si progetta un harness|Claude Code è un esempio di harness Anthropic-ready. Cowork OS è un harness desktop-oriented. La tua Skill è un mini-harness verticale. Combinando Skills più grandi, MCP server e memoria ottieni un harness su misura per il tuo dominio.|Regola d'oro|Un harness è un prodotto software: va versionato, testato, distribuito. Non credere di averlo finito dopo la prima scrittura: il miglioramento è continuo.</p>
-   <hr style="margin-top:2em;border:0;border-top:1px solid var(--border)">
-   <p style="color:var(--muted);font-size:.9rem">Hai trovato utile questa guida? Torna all'<a href="../archivio.html">archivio completo</a> o naviga per <a href="../categorie/index.html">categoria</a>.</p>
+<h2 id="sec-lead">Sintesi</h2>
+<p class="lead">Le tre ere dell’ingegneria dell’AI e le cinque parti che trasformano un chatbot in un lavoratore: modello, contesto, strumenti, loop, osservabilità.</p>
+<h2 id="definizione">Cos’è un harness</h2>
+<p>Un harness è l’insieme delle componenti software che stanno intorno a un modello per farlo lavorare su un task reale. Senza harness Claude è un chatbot brillante. Con il harness diventa un lavoratore. Il termine è diventato di uso comune nel 2025: Anthropic, OpenAI e molti progetti open source pubblicano i propri harness come riferimento.</p>
+<h2 id="tre-ere">Le tre ere dell’ingegneria AI</h2>
+<ul><li>Prompt Engineering (2022-2023) — i modelli sono deboli, conta la forma del prompt.</li><li>Context Engineering (2024) — modelli più capaci, il collo di bottiglia è la qualità del contesto: documenti, memoria, strumenti.</li><li>Harness Engineering (2025-) — modelli potenti, il collo di bottiglia è l’architettura del sistema che li guida.</li></ul>
+<h2 id="cinque-parti">Le cinque parti del harness</h2>
+<ol><li>Modello — la scelta: Sonnet per task complessi, Haiku per task ripetitivi, Opus per ragionamento profondo.</li><li>Contesto — cosa entra nella finestra di input: istruzioni di sistema, esempi, documenti, memoria, strumenti.</li><li>Strumenti — capability esterne: function calling, MCP, esecuzione di codice, file system, browser.</li><li>Loop di controllo — ricevi task, pianifica, esegui, verifica, correggi, riporta.</li><li>Osservabilità — log strutturati, metriche di successo, tracciamento decisioni. Senza di essa non sai se l’agente sta peggiorando.</li></ol>
+<h2 id="progettare">Come si progetta un harness</h2>
+<p>Claude Code è un esempio di harness Anthropic-ready. Cowork OS è un harness desktop-oriented. La tua Skill è un mini-harness verticale. Combinando Skill più grandi, MCP server e memoria persistente ottieni un harness cucito sul tuo dominio.</p>
+<blockquote><p>Un harness è un prodotto software: va versionato, testato, distribuito. Non credere di averlo finito dopo la prima scrittura: il miglioramento è continuo.</p></blockquote>
+<hr>
+<p class="foot-link">Hai trovato utile questa guida? Torna all'<a href="../archivio.html">archivio completo</a> o naviga per <a href="../categorie/index.html">categoria</a>.</p>
   </article>
   <aside class="toc">
-   <h4>Indice</h4>
-   
-   <h4 style="margin-top:14px">Categoria</h4>
+   <h4>In questa guida</h4><a href="#sec-lead">Sintesi</a><a href="#definizione">Cos’è un harness</a><a href="#tre-ere">Le tre ere dell’ingegneria AI</a><a href="#cinque-parti">Le cinque parti del harness</a><a href="#progettare">Come si progetta un harness</a>
+   <h4 style="margin-top:18px">Categoria</h4>
    <a href="../categorie/architetture.html">Architetture</a>
-   <h4 style="margin-top:14px">Altre guide</h4>
-   <a href="../archivio.html">Archivio</a>
+   <h4 style="margin-top:18px">Naviga</h4>
+   <a href="../archivio.html">Archivio completo</a>
    <a href="../index.html">Home</a>
   </aside>
  </div>

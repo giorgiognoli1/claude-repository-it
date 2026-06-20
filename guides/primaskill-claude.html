@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>La tua prima Skill su Claude — Claude & Claude Code | Giorgio Gnoli</title>
-<meta name="description" content="Cos'è una Skill, dove salvarla, come testarla e come iterare in dieci minuti.">
+<meta name="description" content="Cos’è una Skill, dove salvarla, come testarla e come iterarla in dieci minuti.">
 <meta name="author" content="Giorgio Gnoli">
-<meta name="keywords" content="Claude, Claude Code, Claude Base, guida italiana, Giorgio Gnoli">
-<link rel="canonical" href="https://claude.giorgiognoli.it/guides/primaskill-claude.html">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://giorgiognoli1.github.io/claude-repository-it/guides/primaskill-claude.html">
 <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
@@ -32,29 +32,46 @@
 <section class="category-cover">
  <div class="wrap">
   <p class="breadcrumb"><a href="../index.html">Home</a> / <a href="../archivio.html">Archivio</a> / <a href="../categorie/index.html">Categorie</a> / <a href="../categorie/claude-base.html">Claude Base</a></p>
-  <p class="kicker">Claude Base</p>
+  <p class="kicker">Claude Base · Guida operativa</p>
   <h1>La tua prima Skill su Claude</h1>
-  <p class="lead">Cos'è una Skill, dove salvarla, come testarla e come iterare in dieci minuti.</p>
-  <p class="meta">A cura di Giorgio Gnoli · Guida operativa, licenza libera con attribuzione.</p>
+  <p class="lead">Cos’è una Skill, dove salvarla, come testarla e come iterarla in dieci minuti.</p>
+  <p class="meta-line">A cura di Giorgio Gnoli · 5 sezioni</p>
  </div>
 </section>
 
 <section>
  <div class="wrap layout">
   <article class="guide">
-   <p>Cos'è una Skill|Una Skill è un file Markdown con istruzioni specialistiche che Claude legge quando riconosce un task compatibile. È il modo più semplice per 'insegnare' a Claude una procedura senza scrivere codice: qualità di output, formato di risposta, passi da seguire, errori da evitare.|Tipi di Skill|Skill globale: vive in `~/.claude/skills/` ed è disponibile in tutte le sessioni. Skill di progetto: vive in `.claude/skills/` nella cartella del progetto ed è disponibile solo lì. Skill di team: vive in un repo GitHub condiviso.|Anatomia di una Skill|```<br>---<br>name: nome-skill<br>description: una frase su quando attivarla<br>---</p>
-<h1>Istruzioni</h1>
-<p>Passi che Claude deve seguire quando questa Skill è attiva.</p>
-   <hr style="margin-top:2em;border:0;border-top:1px solid var(--border)">
-   <p style="color:var(--muted);font-size:.9rem">Hai trovato utile questa guida? Torna all'<a href="../archivio.html">archivio completo</a> o naviga per <a href="../categorie/index.html">categoria</a>.</p>
+<h2 id="sec-lead">Sintesi</h2>
+<p class="lead">Cos’è una Skill, dove salvarla, come testarla e come iterarla in dieci minuti.</p>
+<h2 id="definizione">Cos’è una Skill</h2>
+<p>Una Skill è un file Markdown con istruzioni specialistiche che Claude legge quando riconosce un task compatibile. È il modo più semplice per insegnare a Claude una procedura senza scrivere codice: qualità di output, formato di risposta, passi da seguire, errori da evitare.</p>
+<h2 id="tipi">Tipi di Skill</h2>
+<ul><li>Globale — vive in ~/.claude/skills/ ed è disponibile in tutte le sessioni.</li><li>Di progetto — vive in .claude/skills/ nella cartella del progetto, disponibile solo lì.</li><li>Di team — vive in un repo GitHub condiviso e si propaga a tutti i collaboratori.</li></ul>
+<h2 id="anatomia">Anatomia di una Skill</h2>
+<pre><code>---
+name: nome-skill
+description: una frase su quando attivarla
+---
+
+# Istruzioni
+
+Passi che Claude deve seguire quando questa Skill è attiva.</code></pre>
+<h2 id="prima">La tua prima Skill in dieci minuti</h2>
+<p>Scegli un task ripetitivo: rivedere un PR di GitHub. Crea il file ~/.claude/skills/review-pr/SKILL.md. Nello YAML dichiara nome e descrizione. Nel corpo scrivi le istruzioni operative.</p>
+<ol><li>Leggi il diff.</li><li>Identifica il cambio di scope.</li><li>Verifica la presenza di test.</li><li> Scrivi una review educata e orientata al miglioramento.</li></ol>
+<p>Salva. Apri una sessione Claude Code, digita rivedi questo PR: &lt;url&gt;. Claude riconosce la Skill e la applica.</p>
+<h2 id="iterazione">Test e iterazione</h2>
+<ul><li>Testa su cinque PR reali.</li><li>Se l’output è troppo lungo, aggiungi max 200 parole alla descrizione.</li><li>Se troppo generico, aggiungi due-tre esempi di output ideale.</li><li>Salva la nuova versione: le Skill migliorano per iterazione, non per riscrittura.</li></ul>
+<hr>
+<p class="foot-link">Hai trovato utile questa guida? Torna all'<a href="../archivio.html">archivio completo</a> o naviga per <a href="../categorie/index.html">categoria</a>.</p>
   </article>
   <aside class="toc">
-   <h4>Indice</h4>
-   
-   <h4 style="margin-top:14px">Categoria</h4>
+   <h4>In questa guida</h4><a href="#sec-lead">Sintesi</a><a href="#definizione">Cos’è una Skill</a><a href="#tipi">Tipi di Skill</a><a href="#anatomia">Anatomia di una Skill</a><a href="#prima">La tua prima Skill in dieci minuti</a><a href="#iterazione">Test e iterazione</a>
+   <h4 style="margin-top:18px">Categoria</h4>
    <a href="../categorie/claude-base.html">Claude Base</a>
-   <h4 style="margin-top:14px">Altre guide</h4>
-   <a href="../archivio.html">Archivio</a>
+   <h4 style="margin-top:18px">Naviga</h4>
+   <a href="../archivio.html">Archivio completo</a>
    <a href="../index.html">Home</a>
   </aside>
  </div>

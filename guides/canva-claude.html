@@ -7,7 +7,7 @@
 <meta name="description" content="Da prompt a grafica pronta: pipeline Claude → Canva via MCP, con template brandizzati.">
 <meta name="author" content="Giorgio Gnoli">
 <meta name="keywords" content="Claude, Claude Code, Setup, guida italiana, Giorgio Gnoli">
-<link rel="canonical" href="https://claude.giorgiognoli.it/guides/canva-claude.html">
+<link rel="canonical" href="https://giorgiognoli1.github.io/claude-repository-it/guides/canva-claude.html">
 <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
@@ -32,27 +32,30 @@
 <section class="category-cover">
  <div class="wrap">
   <p class="breadcrumb"><a href="../index.html">Home</a> / <a href="../archivio.html">Archivio</a> / <a href="../categorie/index.html">Categorie</a> / <a href="../categorie/setup.html">Setup</a></p>
-  <p class="kicker">Setup</p>
+  <p class="kicker">Setup · Guida operativa</p>
   <h1>Integrare Canva con Claude via MCP</h1>
   <p class="lead">Da prompt a grafica pronta: pipeline Claude → Canva via MCP, con template brandizzati.</p>
-  <p class="meta">A cura di Giorgio Gnoli · Guida operativa, licenza libera con attribuzione.</p>
+  <p class="meta-line">A cura di Giorgio Gnoli · 0 sezioni · 5 minuti di lettura</p>
  </div>
 </section>
 
 <section>
  <div class="wrap layout">
   <article class="guide">
-   <p>L'idea|Claude genera copy + brief grafico, Canva esegue con template brandizzato. Risultato: grafiche social pronte in dieci minuti senza toccare Canva manualmente.|Setup Canva|MCP|Configura `canva` MCP server in `~/.mcp.json`. Autentica via OAuth. Seleziona il team Canva con i template brand.|Il prompt generico|'Genera: copy LinkedIn (max 150 caratteri), brief grafico (soggetto, palette proposta, font), template Canva suggerito. Output: JSON con campi separati.'|Pipeline|Claude genera JSON → MCP chiama Canva API con template ID → riceve URL immagine → Claude scrive il post LinkedIn con allegato.|Esempio reale|Input: 'postauguri-per-cliente-X'. Output: copy 'Grazie a X per la fiducia di questi 5 anni!', brief 'soggetto: due mani che si stringono, palette: blu e oro, font: serif classico', template: 'greeting-card-v2'. Risultato: immagine pronta in Canva, pronta per il download.|Limiti|Canva MCP supporta template predefiniti, non creazione da zero. Per grafiche complesse serve plugin Adobe o Figma.|Costi|Canva Pro 12 euro/mese. MCP server gratuito.</p>
-   <hr style="margin-top:2em;border:0;border-top:1px solid var(--border)">
-   <p style="color:var(--muted);font-size:.9rem">Hai trovato utile questa guida? Torna all'<a href="../archivio.html">archivio completo</a> o naviga per <a href="../categorie/index.html">categoria</a>.</p>
+   <h2 id="sec-lead">Sintesi</h2>
+   <p class="lead">Da prompt a grafica pronta: pipeline Claude → Canva via MCP, con template brandizzati.</p>
+<p>L'idea|Claude genera copy + brief grafico, Canva esegue con template brandizzato. Risultato: grafiche social pronte in dieci minuti senza toccare Canva manualmente.|Setup Canva|MCP|Configura `canva` MCP server in `~/.mcp.json`. Autentica via OAuth. Seleziona il team Canva con i template brand.|Il prompt generico|'Genera: copy LinkedIn (max 150 caratteri), brief grafico (soggetto, palette proposta, font), template Canva suggerito. Output: JSON con campi separati.'|Pipeline|Claude genera JSON → MCP chiama Canva API con template ID → riceve URL immagine → Claude scrive il post LinkedIn con allegato.|Esempio reale|Input: 'postauguri-per-cliente-X'. Output: copy 'Grazie a X per la fiducia di questi 5 anni!', brief 'soggetto: due mani che si stringono, palette: blu e oro, font: serif classico', template: 'greeting-card-v2'. Risultato: immagine pronta in Canva, pronta per il download.|Limiti|Canva MCP supporta template predefiniti, non creazione da zero. Per grafiche complesse serve plugin Adobe o Figma.|Costi|Canva Pro 12 euro/mese. MCP server gratuito.</p>
+   <hr>
+   <p style="color:var(--muted);font-size:.92rem">Hai trovato utile questa guida? Torna all'<a href="../archivio.html">archivio completo</a> o naviga per <a href="../categorie/index.html">categoria</a>.</p>
   </article>
   <aside class="toc">
-   <h4>Indice</h4>
+   <h4>In questa guida</h4>
+   <a href="#sec-lead">Sintesi</a>
    
-   <h4 style="margin-top:14px">Categoria</h4>
+   <h4 style="margin-top:18px">Categoria</h4>
    <a href="../categorie/setup.html">Setup</a>
-   <h4 style="margin-top:14px">Altre guide</h4>
-   <a href="../archivio.html">Archivio</a>
+   <h4 style="margin-top:18px">Naviga</h4>
+   <a href="../archivio.html">Archivio completo</a>
    <a href="../index.html">Home</a>
   </aside>
  </div>

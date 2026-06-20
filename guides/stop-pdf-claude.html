@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Smetti di caricare PDF su Claude: usa MarkItDown — Claude & Claude Code | Giorgio Gnoli</title>
-<meta name="description" content="Convertire PDF, Word, PowerPoint e Excel in Markdown pulito con MarkItDown di Microsoft. Setup Desktop in cinque minuti, meno token, risposte più precise.">
+<meta name="description" content="Converti PDF, Word, PowerPoint e Excel in Markdown pulito con MarkItDown di Microsoft. Meno token, risposte più precise, setup Desktop in cinque minuti.">
 <meta name="author" content="Giorgio Gnoli">
-<meta name="keywords" content="Claude, Claude Code, Claude Base, guida italiana, Giorgio Gnoli">
-<link rel="canonical" href="https://claude.giorgiognoli.it/guides/stop-pdf-claude.html">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://giorgiognoli1.github.io/claude-repository-it/guides/stop-pdf-claude.html">
 <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
@@ -32,27 +32,52 @@
 <section class="category-cover">
  <div class="wrap">
   <p class="breadcrumb"><a href="../index.html">Home</a> / <a href="../archivio.html">Archivio</a> / <a href="../categorie/index.html">Categorie</a> / <a href="../categorie/claude-base.html">Claude Base</a></p>
-  <p class="kicker">Claude Base</p>
+  <p class="kicker">Claude Base · Guida operativa</p>
   <h1>Smetti di caricare PDF su Claude: usa MarkItDown</h1>
-  <p class="lead">Convertire PDF, Word, PowerPoint e Excel in Markdown pulito con MarkItDown di Microsoft. Setup Desktop in cinque minuti, meno token, risposte più precise.</p>
-  <p class="meta">A cura di Giorgio Gnoli · Guida operativa, licenza libera con attribuzione.</p>
+  <p class="lead">Converti PDF, Word, PowerPoint e Excel in Markdown pulito con MarkItDown di Microsoft. Meno token, risposte più precise, setup Desktop in cinque minuti.</p>
+  <p class="meta-line">A cura di Giorgio Gnoli · 6 sezioni</p>
  </div>
 </section>
 
 <section>
  <div class="wrap layout">
   <article class="guide">
-   <p>Perché caricare un PDF è un problema|Quando carichi un PDF direttamente su Claude, il tokenizer estrae il testo riga per riga. Il risultato: più token, contesto sprecato, tabelle scomposte in righe senza relazioni. Spesso Claude legge male cifre, intestazioni, footer e layout. Soluzione: converti in Markdown prima, ottieni testo semantico con titoli, elenchi e tabelle che Claude comprende al primo colpo.|Setup MarkItDown in cinque minuti|Passo 1. Installa Python 3.10+ e apri il terminale. Passo 2. Esegui `pip install 'markitdown[all]'`. La flag `[all]` abilita i plugin per PDF, DOCX, PPTX, XLSX, immagini, audio, HTML, CSV, JSON, XML, ZIP, EPub e persino URL di YouTube. Passo 3. Converti un file: `markitdown report.pdf &gt; report.md`. Passo 4. Apri il file Markdown e caricalo come testo in Claude.|Configurazione Desktop in un copia-incolla|Crea un file `markitdown.bat` (Windows) o `markitdown.sh` (Mac/Linux) che riceve un file trascinato sopra e produce il Markdown accanto:|Codice per Windows|`@echo off`<br>`python -m markitdown %1 &gt; %~n1.md`<br>`start %~n1.md`|Codice per Mac/Linux|`#!/bin/bash`<br>`python3 -m markitdown "$1" &gt; "${1%.*}.md"`<br>`open "${1%.*}.md"`|Tabella plugin supportati|MarkItDown supporta nativamente: PDF, DOCX, PPTX, XLSX, JPG/PNG (con OCR), MP3/WAV (trascrizione), HTML, CSV, JSON, XML, ZIP, EPub, URL di YouTube. Per i PDF consiglio pdfminer; per immagini e audio configura prima i plugin opzionali `markitdown[pdf]`, `markitdown[audio]`. La documentazione ufficiale è su github.com/microsoft/markitdown.|Quando convertire davvero|Converti sempre se il PDF contiene tabelle, grafici, schemi, codice, riferimenti incrociati o è più lungo di dieci pagine. Carica direttamente solo se il PDF è un testo narrativo breve senza elementi strutturati.|Risultato|Claude userà meno token, capirà il documento meglio e potrai fare domande puntuali su cifre e sezioni specifiche.|Disclaimer|MarkItDown è un progetto open source di Microsoft. Le istruzioni sono una rielaborazione della documentazione ufficiale, non una copia.</p>
-   <hr style="margin-top:2em;border:0;border-top:1px solid var(--border)">
-   <p style="color:var(--muted);font-size:.9rem">Hai trovato utile questa guida? Torna all'<a href="../archivio.html">archivio completo</a> o naviga per <a href="../categorie/index.html">categoria</a>.</p>
+<h2 id="sec-lead">Sintesi</h2>
+<p class="lead">Converti PDF, Word, PowerPoint e Excel in Markdown pulito con MarkItDown di Microsoft. Meno token, risposte più precise, setup Desktop in cinque minuti.</p>
+<h2 id="perche-pdf">Perché caricare un PDF è un problema</h2>
+<p>Quando carichi un PDF direttamente su Claude, il tokenizer estrae il testo riga per riga. Il risultato è dannoso: più token, contesto sprecato, tabelle scomposte in righe senza relazioni. Spesso Claude legge male cifre, intestazioni, footer e layout a colonna.</p>
+<p>La soluzione è convertire in Markdown prima di caricare. Ottieni testo semantico con titoli, elenchi e tabelle che Claude comprende al primo colpo. Il consumo di token cala tipicamente del 60-80%.</p>
+<h2 id="setup-base">Setup MarkItDown in cinque minuti</h2>
+<ol><li>Installa Python 3.10+ e apri il terminale.</li><li>Esegui pip install 'markitdown[all]'. La flag [all] abilita i plugin per PDF, DOCX, PPTX, XLSX, immagini, audio, HTML, CSV, JSON, XML, ZIP, EPub e URL YouTube.</li><li>Converti un file: markitdown report.pdf &gt; report.md.</li><li>Apri il file Markdown e caricalo come testo in Claude.</li></ol>
+<h2 id="desktop-bat">Configurazione Desktop in un copia-incolla</h2>
+<p>Crea un piccolo script che riceve un file trascinato sopra e produce il Markdown accanto. Su Windows usa un .bat, su Mac e Linux uno .sh.</p>
+<h3>Windows</h3>
+<pre><code>@echo off
+python -m markitdown %1 &gt; %~n1.md
+start %~n1.md</code></pre>
+<h3>Mac e Linux</h3>
+<pre><code>#!/bin/bash
+python3 -m markitdown "$1" &gt; "${1%.*}.md"
+open "${1%.*}.md"</code></pre>
+<h2 id="plugin">Plugin supportati</h2>
+<p>MarkItDown supporta nativamente un’ampia gamma di formati. I più utili in pratica:</p>
+<ul><li>PDF — consigliato pdfminer come motore di estrazione.</li><li>DOCX, PPTX, XLSX — conversione completa di tabelle e stili.</li><li>JPG e PNG — con OCR testo-immagine integrato.</li><li>MP3 e WAV — trascrizione audio in testo.</li><li>HTML, CSV, JSON, XML, ZIP, EPub.</li><li>URL YouTube — estrae i sottotitoli come Markdown.</li></ul>
+<aside class="note"><p>Per PDF complessi installa i plugin opzionali con pip install 'markitdown[pdf]' e 'markitdown[audio]'. La documentazione ufficiale è su github.com/microsoft/markitdown.</p></aside>
+<h2 id="quando">Quando convertire davvero</h2>
+<p>Converti sempre se il PDF contiene una di queste caratteristiche:</p>
+<ul><li>Tabelle numeriche o finanziarie.</li><li>Grafici, schemi, layout a più colonne.</li><li>Codice, formule o riferimenti incrociati.</li><li>Più di dieci pagine di testo strutturato.</li></ul>
+<p>Carica direttamente solo se il PDF è un testo narrativo breve, senza elementi strutturati, e ti serve solo un riassunto discorsivo.</p>
+<h2 id="risultato">Il risultato pratico</h2>
+<p>Claude userà meno token, capirà il documento meglio, e potrai fare domande puntuali su cifre e sezioni specifiche. Su documenti tecnici la qualità delle risposte migliora sensibilmente.</p>
+<hr>
+<p class="foot-link">Hai trovato utile questa guida? Torna all'<a href="../archivio.html">archivio completo</a> o naviga per <a href="../categorie/index.html">categoria</a>.</p>
   </article>
   <aside class="toc">
-   <h4>Indice</h4>
-   
-   <h4 style="margin-top:14px">Categoria</h4>
+   <h4>In questa guida</h4><a href="#sec-lead">Sintesi</a><a href="#perche-pdf">Perché caricare un PDF è un problema</a><a href="#setup-base">Setup MarkItDown in cinque minuti</a><a href="#desktop-bat">Configurazione Desktop in un copia-incolla</a><a href="#plugin">Plugin supportati</a><a href="#quando">Quando convertire davvero</a><a href="#risultato">Il risultato pratico</a>
+   <h4 style="margin-top:18px">Categoria</h4>
    <a href="../categorie/claude-base.html">Claude Base</a>
-   <h4 style="margin-top:14px">Altre guide</h4>
-   <a href="../archivio.html">Archivio</a>
+   <h4 style="margin-top:18px">Naviga</h4>
+   <a href="../archivio.html">Archivio completo</a>
    <a href="../index.html">Home</a>
   </aside>
  </div>

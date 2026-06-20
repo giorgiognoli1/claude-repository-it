@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Collega 33 connettori MCP a Claude — Claude & Claude Code | Giorgio Gnoli</title>
-<meta name="description" content="I connettori MCP pronti all'uso per marketing, sales, analytics, storage e social. Setup un-click e configurazione custom, con link per ogni connettore.">
+<meta name="description" content="I connettori MCP più utili per marketing, sales, analytics, storage, social e database. Setup one-click e configurazione custom, con link per ogni connettore.">
 <meta name="author" content="Giorgio Gnoli">
-<meta name="keywords" content="Claude, Claude Code, Setup, guida italiana, Giorgio Gnoli">
-<link rel="canonical" href="https://claude.giorgiognoli.it/guides/connettori-mcp.html">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://giorgiognoli1.github.io/claude-repository-it/guides/connettori-mcp.html">
 <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
@@ -32,27 +32,54 @@
 <section class="category-cover">
  <div class="wrap">
   <p class="breadcrumb"><a href="../index.html">Home</a> / <a href="../archivio.html">Archivio</a> / <a href="../categorie/index.html">Categorie</a> / <a href="../categorie/setup.html">Setup</a></p>
-  <p class="kicker">Setup</p>
+  <p class="kicker">Setup · Guida operativa</p>
   <h1>Collega 33 connettori MCP a Claude</h1>
-  <p class="lead">I connettori MCP pronti all'uso per marketing, sales, analytics, storage e social. Setup un-click e configurazione custom, con link per ogni connettore.</p>
-  <p class="meta">A cura di Giorgio Gnoli · Guida operativa, licenza libera con attribuzione.</p>
+  <p class="lead">I connettori MCP più utili per marketing, sales, analytics, storage, social e database. Setup one-click e configurazione custom, con link per ogni connettore.</p>
+  <p class="meta-line">A cura di Giorgio Gnoli · 6 sezioni</p>
  </div>
 </section>
 
 <section>
  <div class="wrap layout">
   <article class="guide">
-   <p>Cosa sono i connettori MCP|MCP (Model Context Protocol) è lo standard Anthropic-open-source che permette a Claude di chiamare strumenti esterni in modo strutturato. Un connettore MCP è un server che espone capability specifiche: leggere il filesystem, interrogare un database, postare su LinkedIn, fare scraping legale. Claude lo usa come se fosse una delle sue funzioni native.|Due modalità di setup|Modalità 1. One-click su claude.ai. Vai in Settings → Connectors e attivi quelli che ti servono. Modalità 2. Custom via configurazione JSON. Aggiungi il server MCP al tuo `claude_desktop_config.json` o `.mcp.json`. La seconda modalità ti permette di usare connettori non presenti nella lista ufficiale.|Le 5 famiglie|Famiglia 1. Produttività: Notion, Google Drive, Calendar, Gmail, Slack. Famiglia 2. Coding: GitHub, GitLab, Sentry, Linear, Jira. Famiglia 3. Marketing: HubSpot, Mailchimp, Buffer, Hootsuite. Famiglia 4. Analytics: Google Analytics, Mixpanel, Amplitude, PostHog. Famiglia 5. Storage e Database: Postgres, MySQL, Mongo, S3, Supabase.|I 33 connettori più utili|Notion, Google Drive, Calendar, Gmail, Slack, GitHub, GitLab, Linear, Jira, Sentry, HubSpot, Mailchimp, Buffer, Google Analytics, Mixpanel, Postgres, MySQL, Mongo, S3, Supabase, Stripe, Shopify, LinkedIn, X (Twitter), Reddit, Apify, browserless, filesystem, Figma, Canva, Airtable, Trello, Discord.|Configurazione JSON di esempio|```json<br>{<br>  "mcpServers": {<br>    "github": {"command": "npx", "args": ["-y", "@modelcontextprotocol/server-github"], "env": {"GITHUB_TOKEN": "ghp_xxxxxxxxxxxx"}},<br>    "filesystem": {"command": "npx", "args": ["-y", "@modelcontextprotocol/server-filesystem", "/Users/me/Documents"]}<br>  }<br>}</p>
-   <hr style="margin-top:2em;border:0;border-top:1px solid var(--border)">
-   <p style="color:var(--muted);font-size:.9rem">Hai trovato utile questa guida? Torna all'<a href="../archivio.html">archivio completo</a> o naviga per <a href="../categorie/index.html">categoria</a>.</p>
+<h2 id="sec-lead">Sintesi</h2>
+<p class="lead">I connettori MCP più utili per marketing, sales, analytics, storage, social e database. Setup one-click e configurazione custom, con link per ogni connettore.</p>
+<h2 id="cosa-mcp">Cosa sono i connettori MCP</h2>
+<p>MCP è lo standard open source di Anthropic che permette a Claude di chiamare strumenti esterni in modo strutturato. Un connettore MCP è un server che espone capability specifiche: leggere il filesystem, interrogare un database, postare su LinkedIn, fare scraping legale. Claude lo usa come se fosse una delle sue funzioni native.</p>
+<h2 id="due-modalita">Due modalità di setup</h2>
+<h3>One-click</h3>
+<p>Vai in Settings → Connectors su claude.ai e attivi quelli che ti servono.</p>
+<h3>Custom via JSON</h3>
+<p>Aggiungi il server MCP al tuo claude_desktop_config.json o .mcp.json. Così puoi usare anche connettori non presenti nella lista ufficiale.</p>
+<h2 id="famiglie">Le cinque famiglie</h2>
+<ul><li>Produttività — Notion, Google Drive, Gmail, Slack.</li><li>Coding — GitHub, GitLab, Sentry, Linear, Jira.</li><li>Marketing — HubSpot, Mailchimp, Buffer, Hootsuite.</li><li>Analytics — Google Analytics, Mixpanel, Amplitude, PostHog.</li><li>Storage e Database — Postgres, Mongo, S3, Supabase.</li></ul>
+<h2 id="elenco-33">I 33 connettori più utili</h2>
+<p>Notion, Google Drive, Calendar, Gmail, Slack, GitHub, GitLab, Linear, Jira, Sentry, HubSpot, Mailchimp, Buffer, Google Analytics, Mixpanel, Postgres, MySQL, Mongo, S3, Supabase, Stripe, Shopify, LinkedIn, X, Reddit, Apify, browserless, filesystem, Figma, Canva, Airtable, Trello, Discord.</p>
+<h2 id="configurazione">Configurazione JSON di esempio</h2>
+<pre><code>{
+  "mcpServers": {
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {"GITHUB_TOKEN": "ghp_xxxxxxxxxxxx"}
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem","/Users/me/Documents"]
+    }
+  }
+}</code></pre>
+<h2 id="best-practice">Best practice</h2>
+<ul><li>Connetti solo i server che usi davvero — ogni connettore aggiunge token al contesto.</li><li>Tieni i token in variabili d’ambiente, mai nel JSON.</li><li>Documenta i connettori attivi in un README interno del team.</li></ul>
+<hr>
+<p class="foot-link">Hai trovato utile questa guida? Torna all'<a href="../archivio.html">archivio completo</a> o naviga per <a href="../categorie/index.html">categoria</a>.</p>
   </article>
   <aside class="toc">
-   <h4>Indice</h4>
-   
-   <h4 style="margin-top:14px">Categoria</h4>
+   <h4>In questa guida</h4><a href="#sec-lead">Sintesi</a><a href="#cosa-mcp">Cosa sono i connettori MCP</a><a href="#due-modalita">Due modalità di setup</a><a href="#famiglie">Le cinque famiglie</a><a href="#elenco-33">I 33 connettori più utili</a><a href="#configurazione">Configurazione JSON di esempio</a><a href="#best-practice">Best practice</a>
+   <h4 style="margin-top:18px">Categoria</h4>
    <a href="../categorie/setup.html">Setup</a>
-   <h4 style="margin-top:14px">Altre guide</h4>
-   <a href="../archivio.html">Archivio</a>
+   <h4 style="margin-top:18px">Naviga</h4>
+   <a href="../archivio.html">Archivio completo</a>
    <a href="../index.html">Home</a>
   </aside>
  </div>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sub-agent in Claude Code: come e quando lanciarli — Claude & Claude Code | Giorgio Gnoli</title>
+<meta name="description" content="I sub-agent permettono di parallelizzare task indipendenti. Setup, limiti, esempi pratici.">
+<meta name="author" content="Giorgio Gnoli">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://giorgiognoli1.github.io/claude-repository-it/guides/sub-agent-claude.html">
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+
+<header class="site">
+ <div class="wrap">
+  <a class="brand" href="../index.html">
+   <span class="logo">G</span><span>Claude &amp; Claude Code · Repository</span>
+  </a>
+  <nav class="primary" aria-label="Navigazione principale">
+   <ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../archivio.html">Archivio</a></li>
+    <li><a href="../categorie/index.html">Categorie</a></li>
+    <li><a href="../chi-sono.html">Chi sono</a></li>
+   </ul>
+  </nav>
+  <a class="cta" href="../archivio.html">Archivio →</a>
+ </div>
+</header>
+
+<section class="category-cover">
+ <div class="wrap">
+  <p class="breadcrumb"><a href="../index.html">Home</a> / <a href="../archivio.html">Archivio</a> / <a href="../categorie/index.html">Categorie</a> / <a href="../categorie/architetture.html">Architetture</a></p>
+  <p class="kicker">Architetture · Guida operativa</p>
+  <h1>Sub-agent in Claude Code: come e quando lanciarli</h1>
+  <p class="lead">I sub-agent permettono di parallelizzare task indipendenti. Setup, limiti, esempi pratici.</p>
+  <p class="meta-line">A cura di Giorgio Gnoli · 5 sezioni</p>
+ </div>
+</section>
+
+<section>
+ <div class="wrap layout">
+  <article class="guide">
+<h2 id="sec-lead">Sintesi</h2>
+<p class="lead">I sub-agent permettono di parallelizzare task indipendenti. Setup, limiti, esempi pratici.</p>
+<h2 id="definizione">Cos’è un sub-agent</h2>
+<p>Un sub-agent è una sessione Claude autonoma lanciata dal tuo agente principale per eseguire un task isolato. Ogni sub-agent ha il suo contesto, i suoi strumenti e il suo criterio di successo.</p>
+<h2 id="quando">Quando lanciare un sub-agent</h2>
+<ul><li>Task indipendenti che possono girare in parallelo.</li><li>Ricerche lunghe che sporcano il contesto principale.</li><li>Verifiche di qualità o test automatici.</li><li>Generazione di artefatti collateral al task principale.</li></ul>
+<h2 id="configurazione">Configurazione</h2>
+<p>In Claude Code i sub-agent si definiscono nel file CLAUDE.md del progetto. Specifica nome, strumenti, modello e criteri di successo.</p>
+<h2 id="limiti">Limiti pratici</h2>
+<p>Non lanciare un sub-agent per task semplici che puoi fare in linea. L’overhead di setup supera il beneficio. I sub-agent sono efficaci quando il task dura almeno qualche minuto.</p>
+<h2 id="esempio">Esempio end-to-end</h2>
+<p>Task: rivedere un PR di mille righe. L’agente principale lancia due sub-agent: uno analizza la logica, l’altro verifica i test. Poi integra i risultati e produce il commento di review.</p>
+<hr>
+<p class="foot-link">Hai trovato utile questa guida? Torna all'<a href="../archivio.html">archivio completo</a> o naviga per <a href="../categorie/index.html">categoria</a>.</p>
+  </article>
+  <aside class="toc">
+   <h4>In questa guida</h4><a href="#sec-lead">Sintesi</a><a href="#definizione">Cos’è un sub-agent</a><a href="#quando">Quando lanciare un sub-agent</a><a href="#configurazione">Configurazione</a><a href="#limiti">Limiti pratici</a><a href="#esempio">Esempio end-to-end</a>
+   <h4 style="margin-top:18px">Categoria</h4>
+   <a href="../categorie/architetture.html">Architetture</a>
+   <h4 style="margin-top:18px">Naviga</h4>
+   <a href="../archivio.html">Archivio completo</a>
+   <a href="../index.html">Home</a>
+  </aside>
+ </div>
+</section>
+
+<footer class="site">
+ <div class="wrap">
+  <div>
+   <strong>Claude &amp; Claude Code · Repository Italiano</strong><br>
+   Curato da <span class="signature">Giorgio Gnoli</span> · Tutti i contenuti sono originali o rielaborati con attribuzione alle fonti originali.
+  </div>
+  <div>
+   <a href="../chi-sono.html">Chi sono</a> ·
+   <a href="../archivio.html">Archivio</a> ·
+   <a href="../categorie/index.html">Categorie</a>
+  </div>
+ </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

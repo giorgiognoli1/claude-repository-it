@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Loop Engineering: guida completa — Claude & Claude Code | Giorgio Gnoli</title>
-<meta name="description" content="Dai prompt ai loop. Quattro ere dell'ingegneria dell'AI e le sei parti del loop agentico Anthropic per costruire agenti Claude robusti.">
+<meta name="description" content="Dai prompt ai loop. Quattro ere dell’ingegneria AI e le sei parti del loop agentico Anthropic per costruire agenti Claude robusti.">
 <meta name="author" content="Giorgio Gnoli">
-<meta name="keywords" content="Claude, Claude Code, Architetture, guida italiana, Giorgio Gnoli">
-<link rel="canonical" href="https://claude.giorgiognoli.it/guides/loop-engineering.html">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://giorgiognoli1.github.io/claude-repository-it/guides/loop-engineering.html">
 <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
@@ -32,27 +32,39 @@
 <section class="category-cover">
  <div class="wrap">
   <p class="breadcrumb"><a href="../index.html">Home</a> / <a href="../archivio.html">Archivio</a> / <a href="../categorie/index.html">Categorie</a> / <a href="../categorie/architetture.html">Architetture</a></p>
-  <p class="kicker">Architetture</p>
+  <p class="kicker">Architetture · Guida operativa</p>
   <h1>Loop Engineering: guida completa</h1>
-  <p class="lead">Dai prompt ai loop. Quattro ere dell'ingegneria dell'AI e le sei parti del loop agentico Anthropic per costruire agenti Claude robusti.</p>
-  <p class="meta">A cura di Giorgio Gnoli · Guida operativa, licenza libera con attribuzione.</p>
+  <p class="lead">Dai prompt ai loop. Quattro ere dell’ingegneria AI e le sei parti del loop agentico Anthropic per costruire agenti Claude robusti.</p>
+  <p class="meta-line">A cura di Giorgio Gnoli · 6 sezioni</p>
  </div>
 </section>
 
 <section>
  <div class="wrap layout">
   <article class="guide">
-   <p>Dal prompt al loop|Un prompt è una domanda one-shot. Un loop è un ciclo che continua finché il task non è risolto. La differenza è enorme: con un prompt speri che il modello faccia tutto giusto al primo colpo, con un loop ti aspetti che il modello provi, verifichi, corregga e consegni un risultatoValidabile. La maggior parte del valore reale dell'AI si ottiene con i loop, non con i prompt puri.|Le quattro ere|Era 0. Chatbot (fino al 2022). Domande e risposte libere. Era 1. Prompt Engineering (2023). Istruzioni strutturate, esempi, formati di output. Era 2. Context Engineering (2024). RAG, tool use, memoria di sessione. Era 3. Loop Engineering (2025-). Agentic loops, sub-agent, valutazione automatica, osservabilità.|Le sei parti del loop agentico|1. Obiettivo. Una frase, un risultato, un criterio di successo. Senza obiettivo chiaro l'agente ristagna. 2. Strumenti. Le capability esterne che l'agente può chiamare: file system, codice, browser, API, MCP. 3. Criteri di successo. Come l'agente sa di aver finito: un file creato, un test passato, un valore numerico raggiunto. 4. Gestione errori. Cosa fare quando uno strumento fallisce: riprovare, cambiare approccio, chiedere aiuto umano. 5. Limiti di risorse. Tempo, token, chiamate strumenti, profondità di sub-agent. Senza limiti l'agente gira all'infinito e brucia budget. 6. Output finale. La struttura del risultato consegnato: file, dashboard, JSON, message.|Modello Anthropic|Claude Code implementa tutte e sei le parti: obiettivi chiari nel prompt, strumenti via MCP, successo tramite test eseguiti, error handling con retry intelligente, risorse limitate dal runtime, output come modifiche al filesystem. Studiando il comportamento di Claude Code impari il pattern.|Come scrivere il tuo primo loop|Parti da un task ripetitivo che fai a mano: rinominare file, estrarre dati, generare report. Definisci l'obiettivo, elenca gli strumenti, scrivi il criterio di successo, esegui una prima volta, aggiusta, ripeti.|Quando NON usare un loop|Se il task è creativo, one-shot, o richiede decisioni umane forti, un loop puro non basta. Meglio un prompt forte o una collaborazione agente-umano con punti di blocco espliciti.</p>
-   <hr style="margin-top:2em;border:0;border-top:1px solid var(--border)">
-   <p style="color:var(--muted);font-size:.9rem">Hai trovato utile questa guida? Torna all'<a href="../archivio.html">archivio completo</a> o naviga per <a href="../categorie/index.html">categoria</a>.</p>
+<h2 id="sec-lead">Sintesi</h2>
+<p class="lead">Dai prompt ai loop. Quattro ere dell’ingegneria AI e le sei parti del loop agentico Anthropic per costruire agenti Claude robusti.</p>
+<h2 id="dal-prompt">Dal prompt al loop</h2>
+<p>Un prompt è una domanda one-shot. Un loop è un ciclo che continua finché il task non è risolto. La differenza è enorme: con un prompt speri che il modello faccia tutto giusto al primo colpo. Con un loop ti aspetti che provi, verifichi, corregga e consegni un risultato validabile.</p>
+<h2 id="quattro-ere">Le quattro ere</h2>
+<ul><li>Chatbot (fino al 2022) — domande e risposte libere.</li><li>Prompt Engineering (2023) — istruzioni strutturate, esempi, formati di output.</li><li>Context Engineering (2024) — RAG, tool use, memoria di sessione.</li><li>Loop Engineering (2025-) — agentic loop, sub-agent, valutazione automatica, osservabilità.</li></ul>
+<h2 id="sei-parti">Le sei parti del loop agentico</h2>
+<ol><li>Obiettivo — una frase, un risultato, un criterio di successo. Senza obiettivo chiaro l’agente ristagna.</li><li>Strumenti — capability esterne che l’agente può chiamare: file system, codice, browser, API, MCP.</li><li>Criteri di successo — come l’agente sa di aver finito: file creato, test passato, valore numerico raggiunto.</li><li>Gestione errori — riprovare, cambiare approccio, chiedere aiuto umano.</li><li>Limiti di risorse — tempo, token, chiamate strumenti, profondità di sub-agent. Senza limiti l’agente gira all’infinito.</li><li>Output finale — struttura del risultato consegnato: file, dashboard, JSON, messaggio.</li></ol>
+<h2 id="modello">Il modello Anthropic</h2>
+<p>Claude Code implementa tutte e sei le parti: obiettivi chiari nel prompt, strumenti via MCP, successo tramite test eseguiti, error handling con retry intelligente, risorse limitate dal runtime, output come modifiche al filesystem. Studiando il comportamento di Claude Code impari il pattern.</p>
+<h2 id="primo-loop">Come scrivere il tuo primo loop</h2>
+<p>Parti da un task ripetitivo che fai a mano: rinominare file, estrarre dati, generare report. Definisci l’obiettivo, elenca gli strumenti, scrivi il criterio di successo, esegui una prima volta, aggiusta, ripeti.</p>
+<h2 id="quando-no">Quando NON usare un loop</h2>
+<p>Se il task è creativo, one-shot o richiede decisioni umane forti, un loop puro non basta. Meglio un prompt forte o una collaborazione agente-umano con punti di blocco espliciti.</p>
+<hr>
+<p class="foot-link">Hai trovato utile questa guida? Torna all'<a href="../archivio.html">archivio completo</a> o naviga per <a href="../categorie/index.html">categoria</a>.</p>
   </article>
   <aside class="toc">
-   <h4>Indice</h4>
-   
-   <h4 style="margin-top:14px">Categoria</h4>
+   <h4>In questa guida</h4><a href="#sec-lead">Sintesi</a><a href="#dal-prompt">Dal prompt al loop</a><a href="#quattro-ere">Le quattro ere</a><a href="#sei-parti">Le sei parti del loop agentico</a><a href="#modello">Il modello Anthropic</a><a href="#primo-loop">Come scrivere il tuo primo loop</a><a href="#quando-no">Quando NON usare un loop</a>
+   <h4 style="margin-top:18px">Categoria</h4>
    <a href="../categorie/architetture.html">Architetture</a>
-   <h4 style="margin-top:14px">Altre guide</h4>
-   <a href="../archivio.html">Archivio</a>
+   <h4 style="margin-top:18px">Naviga</h4>
+   <a href="../archivio.html">Archivio completo</a>
    <a href="../index.html">Home</a>
   </aside>
  </div>

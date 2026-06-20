@@ -6,8 +6,8 @@
 <title>Tutti i 118 comandi di Claude Code — Claude & Claude Code | Giorgio Gnoli</title>
 <meta name="description" content="Reference completo dei comandi slash di Claude Code: cosa fanno, quando usarli, esempi di output.">
 <meta name="author" content="Giorgio Gnoli">
-<meta name="keywords" content="Claude, Claude Code, Claude Base, guida italiana, Giorgio Gnoli">
-<link rel="canonical" href="https://claude.giorgiognoli.it/guides/118-comandi-claude-code.html">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://giorgiognoli1.github.io/claude-repository-it/guides/118-comandi-claude-code.html">
 <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
@@ -32,27 +32,43 @@
 <section class="category-cover">
  <div class="wrap">
   <p class="breadcrumb"><a href="../index.html">Home</a> / <a href="../archivio.html">Archivio</a> / <a href="../categorie/index.html">Categorie</a> / <a href="../categorie/claude-base.html">Claude Base</a></p>
-  <p class="kicker">Claude Base</p>
+  <p class="kicker">Claude Base · Guida operativa</p>
   <h1>Tutti i 118 comandi di Claude Code</h1>
   <p class="lead">Reference completo dei comandi slash di Claude Code: cosa fanno, quando usarli, esempi di output.</p>
-  <p class="meta">A cura di Giorgio Gnoli · Guida operativa, licenza libera con attribuzione.</p>
+  <p class="meta-line">A cura di Giorgio Gnoli · 8 sezioni</p>
  </div>
 </section>
 
 <section>
  <div class="wrap layout">
   <article class="guide">
-   <p>Come è organizzato|Claude Code ha cinque famiglie di comandi: sessione (avvio, pausa, ripresa), file system (lettura, scrittura, ricerca), git (commit, branch, diff), skill (abilitazione, testing) e config (modelli, hooks, MCP). I 118 comandi totali coprono tutto il ciclo di vita di una sessione di lavoro.|Comandi di sessione|`/help` mostra l'aiuto. `/clear` svuota il contesto. `/compact` riassume la conversazione per liberare token. `/resume` riprende una sessione precedente. `/exit` chiude. `/login` autentica. `/logout` disconnette.|Comandi file system|`/read &lt;file&gt;` legge un file. `/write &lt;file&gt; &lt;contenuto&gt;` scrive. `/edit &lt;file&gt; &lt;vecchio&gt; &lt;nuovo&gt;` modifica. `/ls &lt;cartella&gt;` lista. `/find &lt;pattern&gt;` cerca ricorsivamente. `/grep &lt;pattern&gt;` ricerca nei contenuti.|Comandi git|`/git status` stato. `/git diff` differenze. `/git commit` committa. `/git log` log. `/git branch` gestione branch.|Comandi skill|`/skill list` lista skill installate. `/skill enable &lt;nome&gt;` abilita. `/skill test &lt;nome&gt;` test. `/skill create &lt;nome&gt;` wizard creazione.|Comandi config|`/model` cambia modello. `/config` mostra configurazione corrente. `/mcp add &lt;server&gt;` aggiunge MCP server. `/hooks` gestione hook.|Come scegliere il comando giusto|Apri `/help` se non ricordi. Se lavori su un file, usa `/read` e `/edit`. Se generi codice, preferisci le subroutine inline e usa i comandi slash solo per il meta-lavoro.|Performance|La maggior parte dei comandi è veloce. `/compact` e `/resume` sono i più costosi in token ma i più utili per sessioni lunghe.</p>
-   <hr style="margin-top:2em;border:0;border-top:1px solid var(--border)">
-   <p style="color:var(--muted);font-size:.9rem">Hai trovato utile questa guida? Torna all'<a href="../archivio.html">archivio completo</a> o naviga per <a href="../categorie/index.html">categoria</a>.</p>
+<h2 id="sec-lead">Sintesi</h2>
+<p class="lead">Reference completo dei comandi slash di Claude Code: cosa fanno, quando usarli, esempi di output.</p>
+<h2 id="organizzazione">Come è organizzato</h2>
+<p>Claude Code ha cinque famiglie di comandi: sessione, file system, git, skill e config. I 118 comandi totali coprono tutto il ciclo di vita di una sessione di lavoro.</p>
+<h2 id="sessione">Comandi di sessione</h2>
+<ul><li>/help — mostra l’aiuto contestuale.</li><li>/clear — svuota il contesto.</li><li>/compact — riassume la conversazione per liberare token.</li><li>/resume — riprende una sessione precedente.</li><li>/exit — chiude la sessione.</li><li>/login — autentica.</li><li>/logout — disconnette.</li></ul>
+<h2 id="filesystem">Comandi file system</h2>
+<ul><li>/read &lt;file&gt; — legge un file.</li><li>/write &lt;file&gt; &lt;contenuto&gt; — scrive un file.</li><li>/edit &lt;file&gt; &lt;vecchio&gt; &lt;nuovo&gt; — modifica un file.</li><li>/ls &lt;cartella&gt; — lista contenuti.</li><li>/find &lt;pattern&gt; — cerca ricorsivamente per nome.</li><li>/grep &lt;pattern&gt; — ricerca nei contenuti.</li></ul>
+<h2 id="git">Comandi git</h2>
+<ul><li>/git status — stato del repo.</li><li>/git diff — differenze non committate.</li><li>/git commit — committa le modifiche.</li><li>/git log — log delle commit.</li><li>/git branch — gestione branch.</li></ul>
+<h2 id="skill">Comandi skill</h2>
+<ul><li>/skill list — lista delle Skill installate.</li><li>/skill enable &lt;nome&gt; — abilita una Skill.</li><li>/skill test &lt;nome&gt; — esegue test della Skill.</li><li>/skill create &lt;nome&gt; — wizard di creazione.</li></ul>
+<h2 id="config">Comandi config</h2>
+<ul><li>/model — cambia modello attivo.</li><li>/config — mostra la configurazione corrente.</li><li>/mcp add &lt;server&gt; — aggiunge un MCP server.</li><li>/hooks — gestione hook di automazione.</li></ul>
+<h2 id="scelta">Come scegliere il comando giusto</h2>
+<p>Apri /help se non ricordi il comando. Se lavori su un file, usa /read e /edit. Se generi codice, preferisci le subroutine inline e usa i comandi slash per il meta-lavoro.</p>
+<h2 id="performance">Performance</h2>
+<p>La maggior parte dei comandi è veloce. /compact e /resume sono i più costosi in token ma i più utili per sessioni lunghe. Usali ogni due-tre ore di lavoro continuato.</p>
+<hr>
+<p class="foot-link">Hai trovato utile questa guida? Torna all'<a href="../archivio.html">archivio completo</a> o naviga per <a href="../categorie/index.html">categoria</a>.</p>
   </article>
   <aside class="toc">
-   <h4>Indice</h4>
-   
-   <h4 style="margin-top:14px">Categoria</h4>
+   <h4>In questa guida</h4><a href="#sec-lead">Sintesi</a><a href="#organizzazione">Come è organizzato</a><a href="#sessione">Comandi di sessione</a><a href="#filesystem">Comandi file system</a><a href="#git">Comandi git</a><a href="#skill">Comandi skill</a><a href="#config">Comandi config</a><a href="#scelta">Come scegliere il comando giusto</a><a href="#performance">Performance</a>
+   <h4 style="margin-top:18px">Categoria</h4>
    <a href="../categorie/claude-base.html">Claude Base</a>
-   <h4 style="margin-top:14px">Altre guide</h4>
-   <a href="../archivio.html">Archivio</a>
+   <h4 style="margin-top:18px">Naviga</h4>
+   <a href="../archivio.html">Archivio completo</a>
    <a href="../index.html">Home</a>
   </aside>
  </div>

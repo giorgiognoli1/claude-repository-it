@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Memoria permanente per Claude — Claude & Claude Code | Giorgio Gnoli</title>
-<meta name="description" content="Come dare a Claude una memoria che sopravvive a sessioni, provider e cambi di device. Tre strategie combinabili.">
+<meta name="description" content="Tre strategie combinabili per dare a Claude una memoria che sopravvive a sessioni, provider e cambi di device.">
 <meta name="author" content="Giorgio Gnoli">
-<meta name="keywords" content="Claude, Claude Code, Architetture, guida italiana, Giorgio Gnoli">
-<link rel="canonical" href="https://claude.giorgiognoli.it/guides/memoria-permanente.html">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://giorgiognoli1.github.io/claude-repository-it/guides/memoria-permanente.html">
 <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
@@ -32,27 +32,40 @@
 <section class="category-cover">
  <div class="wrap">
   <p class="breadcrumb"><a href="../index.html">Home</a> / <a href="../archivio.html">Archivio</a> / <a href="../categorie/index.html">Categorie</a> / <a href="../categorie/architetture.html">Architetture</a></p>
-  <p class="kicker">Architetture</p>
+  <p class="kicker">Architetture · Guida operativa</p>
   <h1>Memoria permanente per Claude</h1>
-  <p class="lead">Come dare a Claude una memoria che sopravvive a sessioni, provider e cambi di device. Tre strategie combinabili.</p>
-  <p class="meta">A cura di Giorgio Gnoli · Guida operativa, licenza libera con attribuzione.</p>
+  <p class="lead">Tre strategie combinabili per dare a Claude una memoria che sopravvive a sessioni, provider e cambi di device.</p>
+  <p class="meta-line">A cura di Giorgio Gnoli · 6 sezioni</p>
  </div>
 </section>
 
 <section>
  <div class="wrap layout">
   <article class="guide">
-   <p>Perché serve|La memoria di sessione di Claude è volatile: nuova chat, nuovi vuoti. Senza memoria permanente devi ogni volta rispiegare chi sei, cosa fai, quali preferenze hai. La memoria permanente trasforma Claude in un collaboratore continuo, non in un collega con amnesia.|Strategia 1. Skill di onboarding|Crea una Skill `chi-sono` che descrive te, il tuo lavoro, i tuoi clienti tipo, le tue preferenze. Claude la legge all'inizio di ogni sessione. È il metodo più semplice e funziona subito.|Strategia 2. MEMORY.md in Obsidian|Mantieni un file `MEMORY.md` in Obsidian che aggiorni manualmente. All'inizio di ogni sessione Claude carica il file. Il vantaggio: la memoria è editabile, versionata, ricercabile.|Strategia 3. Repository Git|Tutte le tue decisioni, preferenze, glossari e template di prompt salvati in un repo Git. Claude fetcha i file rilevanti all'inizio del task. Vantaggio: versione distribuita, portabile tra device.|Combinazione strategica|Strategia 1 per chi sei. Strategia 2 per cosa stai facendo ora. Strategia 3 per il know-how di lungo periodo. Insieme coprono tutto.|Cosa non mettere in memoria|Niente password, niente dati sanitari, niente numeri di carta. La memoria è testo in chiaro, trattala come una mail aperta.</p>
-   <hr style="margin-top:2em;border:0;border-top:1px solid var(--border)">
-   <p style="color:var(--muted);font-size:.9rem">Hai trovato utile questa guida? Torna all'<a href="../archivio.html">archivio completo</a> o naviga per <a href="../categorie/index.html">categoria</a>.</p>
+<h2 id="sec-lead">Sintesi</h2>
+<p class="lead">Tre strategie combinabili per dare a Claude una memoria che sopravvive a sessioni, provider e cambi di device.</p>
+<h2 id="perche">Perché serve</h2>
+<p>La memoria di sessione di Claude è volatile: nuova chat, nuovi vuoti. Senza memoria permanente devi ogni volta rispiegare chi sei, cosa fai, quali preferenze hai. La memoria permanente trasforma Claude in un collaboratore continuo, non in un collega con amnesia.</p>
+<h2 id="strategia-1">Strategia 1 — Skill di onboarding</h2>
+<p>Crea una Skill chi-sono che descrive te, il tuo lavoro, i tuoi clienti tipo, le tue preferenze. Claude la legge all’inizio di ogni sessione. È il metodo più semplice e funziona subito.</p>
+<h2 id="strategia-2">Strategia 2 — MEMORY.md in Obsidian</h2>
+<p>Mantieni un file MEMORY.md in Obsidian che aggiorni manualmente. All’inizio di ogni sessione Claude carica il file. Il vantaggio: la memoria è editabile, versionata, ricercabile.</p>
+<h2 id="strategia-3">Strategia 3 — repository Git</h2>
+<p>Tutte le tue decisioni, preferenze, glossari e template di prompt salvati in un repo Git. Claude fetcha i file rilevanti all’inizio del task. Vantaggio: versione distribuita, portabile tra device.</p>
+<h2 id="combinazione">Combinazione consigliata</h2>
+<p>Strategia 1 per chi sei. Strategia 2 per cosa stai facendo ora. Strategia 3 per il know-how di lungo periodo. Insieme coprono tutto.</p>
+<h2 id="cosa-no">Cosa non mettere in memoria</h2>
+<ul><li>Niente password.</li><li>Niente dati sanitari personali.</li><li>Niente numeri di carta o codici fiscali completi.</li></ul>
+<p>La memoria è testo in chiaro, trattala come una mail aperta.</p>
+<hr>
+<p class="foot-link">Hai trovato utile questa guida? Torna all'<a href="../archivio.html">archivio completo</a> o naviga per <a href="../categorie/index.html">categoria</a>.</p>
   </article>
   <aside class="toc">
-   <h4>Indice</h4>
-   
-   <h4 style="margin-top:14px">Categoria</h4>
+   <h4>In questa guida</h4><a href="#sec-lead">Sintesi</a><a href="#perche">Perché serve</a><a href="#strategia-1">Strategia 1 — Skill di onboarding</a><a href="#strategia-2">Strategia 2 — MEMORY.md in Obsidian</a><a href="#strategia-3">Strategia 3 — repository Git</a><a href="#combinazione">Combinazione consigliata</a><a href="#cosa-no">Cosa non mettere in memoria</a>
+   <h4 style="margin-top:18px">Categoria</h4>
    <a href="../categorie/architetture.html">Architetture</a>
-   <h4 style="margin-top:14px">Altre guide</h4>
-   <a href="../archivio.html">Archivio</a>
+   <h4 style="margin-top:18px">Naviga</h4>
+   <a href="../archivio.html">Archivio completo</a>
    <a href="../index.html">Home</a>
   </aside>
  </div>

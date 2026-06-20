@@ -4,8 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Archivio completo — Claude & Claude Code | Giorgio Gnoli</title>
-<meta name="description" content="Archivio italiano di tutte le guide, prompt e setup su Claude e Claude Code. Ricerca testuale per titolo, descrizione o categoria.">
+<meta name="description" content="Tutte le guide del repository: 34 pagine operative su Claude, Claude Code, Skills, MCP, agenti e prompt, con ricerca testuale.">
 <meta name="author" content="Giorgio Gnoli">
+<link rel="canonical" href="https://giorgiognoli1.github.io/claude-repository-it/archivio.html">
 <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
@@ -23,19 +24,27 @@
     <li><a href="chi-sono.html">Chi sono</a></li>
    </ul>
   </nav>
-  <a class="cta" href="index.html">Home →</a>
+  <a class="cta" href="archivio.html">Archivio →</a>
  </div>
 </header>
 
 <section class="category-cover">
  <div class="wrap">
   <p class="breadcrumb"><a href="index.html">Home</a> / Archivio</p>
-  <h1>Archivio completo</h1>
-  <p>Tutte le guide, i prompt e i setup pubblicati. Usa la ricerca per trovare rapidamente quello che ti serve.</p>
+  <p class="kicker">Archivio completo</p>
+  <h1>Le 34 guide del repository</h1>
+  <p class="lead">Tutte le guide in ordine alfabetico, filtrabili per categoria e ricercabili per parola chiave. Clicca un titolo per aprire la pagina completa.</p>
   <div class="search">
-   <span>🔎</span>
-   <input id="archiveSearch" type="search" placeholder="Cerca per titolo, descrizione o categoria…" aria-label="Cerca nell'archivio">
-   <span class="hint">30 contenuti</span>
+   <input type="search" id="archiveSearch" placeholder="Cerca per titolo o parola chiave…" aria-label="Cerca nelle guide">
+   <span class="hint">/</span>
+  </div>
+  <div class="chips">
+   <a class="chip" href="#" data-filter="all">Tutte</a>
+   <a class="chip" href="#" data-filter="claude-base">Claude Base</a>
+   <a class="chip" href="#" data-filter="architetture">Architetture</a>
+   <a class="chip" href="#" data-filter="setup">Setup</a>
+   <a class="chip" href="#" data-filter="prompt">Prompt</a>
+   <a class="chip" href="#" data-filter="team">Team</a>
   </div>
  </div>
 </section>
@@ -43,211 +52,176 @@
 <section>
  <div class="wrap">
   <div class="grid cols-3" id="archiveList">
-
-   <div class="card archive-item" data-title="stop pdf claude markitdown" data-desc="convertire pdf word excel markdown prima di caricarli" data-cat="Claude Base">
-    <span class="tag cat">Claude Base</span>
-    <h3><a href="guides/stop-pdf-claude.html">Smetti di caricare PDF su Claude</a></h3>
-    <p>MarkItDown di Microsoft: converti PDF, Word, PowerPoint, Excel in Markdown. Setup Desktop in cinque minuti.</p>
-   </div>
-
-   <div class="card archive-item" data-title="impara claude gratis 11 guide" data-desc="percorso di apprendimento per principianti" data-cat="Claude Base">
-    <span class="tag cat">Claude Base</span>
-    <h3><a href="guides/impara-claude-gratis.html">Le 11 guide gratuite per imparare Claude</a></h3>
-    <p>Le undici migliori guide in ordine di difficoltà, dalla 101 ai comandi di Claude Code.</p>
-   </div>
-
-   <div class="card archive-item" data-title="harness engineering" data-desc="cinque parti di un agente claude robusto" data-cat="Architetture">
-    <span class="tag cat">Architetture</span>
-    <h3><a href="guides/harness-engineering.html">Harness Engineering, spiegato</a></h3>
-    <p>Le tre ere dell'ingegneria AI e le cinque parti che trasformano un chatbot in un lavoratore.</p>
-   </div>
-
-   <div class="card archive-item" data-title="loop engineering agentic" data-desc="sei parti del loop agentico anthropic" data-cat="Architetture">
-    <span class="tag cat">Architetture</span>
-    <h3><a href="guides/loop-engineering.html">Loop Engineering: guida completa</a></h3>
-    <p>Dai prompt ai loop. Quattro ere e le sei parti del loop agentico: obiettivi, strumenti, successo, errori, risorse, output.</p>
-   </div>
-
-   <div class="card archive-item" data-title="claude per team" data-desc="cowork organizzazione github condiviso" data-cat="Team">
-    <span class="tag cat">Team</span>
-    <h3><a href="guides/claude-per-team.html">Claude for Teams: setup completo</a></h3>
-    <p>Due strade per portare tutto il team su Claude: organizzazione o repo GitHub unico. Click-paths.</p>
-   </div>
-
-   <div class="card archive-item" data-title="connettori mcp" data-desc="33 connettori marketing analytics crm" data-cat="Setup">
-    <span class="tag cat">Setup</span>
-    <h3><a href="guides/connettori-mcp.html">Collega 33 connettori MCP a Claude</a></h3>
-    <p>Marketing, analytics, storage, social, database: setup one-click + configurazione custom. Link per ogni connettore.</p>
-   </div>
-
-   <div class="card archive-item" data-title="claude design setup" data-desc="brand kit template primo progetto" data-cat="Setup">
-    <span class="tag cat">Setup</span>
-    <h3><a href="guides/setup-claude-design.html">Configurare Claude Design</a></h3>
-    <p>Workspace, caricamento brand kit, scelta template e iterazione sul primo progetto.</p>
-   </div>
-
-   <div class="card archive-item" data-title="carousel generator" data-desc="prompt per instagram linkedin" data-cat="Prompt">
-    <span class="tag cat">Prompt</span>
-    <h3><a href="guides/carousel-generator.html">Claude Carousel Generator</a></h3>
-    <p>Prompt riutilizzabile per generare carousel on-brand per Instagram e LinkedIn. Colori e font impostati una volta.</p>
-   </div>
-
-   <div class="card archive-item" data-title="118 comandi claude code" data-desc="tutti i comandi della cli" data-cat="Claude Base">
-    <span class="tag cat">Claude Base</span>
-    <h3><a href="guides/118-comandi-claude-code.html">Tutti i 118 comandi di Claude Code</a></h3>
-    <p>Reference completo: comandi slash, flag, sotto-comandi, esempi di output e scorciatoie.</p>
-   </div>
-
-   <div class="card archive-item" data-title="prima skill claude code" data-desc="come creare la prima skill" data-cat="Claude Base">
-    <span class="tag cat">Claude Base</span>
-    <h3><a href="guides/primaskill-claude.html">La tua prima Skill su Claude</a></h3>
-    <p>Cos'è una Skill, dove salvarla, come testarla e come iterare in dieci minuti.</p>
-   </div>
-
-   <div class="card archive-item" data-title="bonus cinque skills" data-desc="cinque skill immediate" data-cat="Claude Base">
-    <span class="tag cat">Claude Base</span>
-    <h3><a href="guides/top-5-skills.html">Cinque Skill bonus da installare subito</a></h3>
-    <p>Una selezione di cinque Skill pronte all'uso per i task più frequenti.</p>
-   </div>
-
-   <div class="card archive-item" data-title="53 skill top" data-desc="skill più utili classifica" data-cat="Claude Base">
-    <span class="tag cat">Claude Base</span>
-    <h3><a href="guides/top-53-skills.html">Le 53 Skill più utili</a></h3>
-    <p>Una classifica ragionata delle 53 Skill che fanno risparmiare più tempo ogni settimana.</p>
-   </div>
-
-   <div class="card archive-item" data-title="cowork os setup" data-desc="desktop mac linux windows" data-cat="Setup">
-    <span class="tag cat">Setup</span>
-    <h3><a href="guides/cowork-os-setup.html">Cowork OS: setup desktop</a></h3>
-    <p>Installazione passo-passo su Mac, Linux e Windows, compresi i permessi di rete e la memoria locale.</p>
-   </div>
-
-   <div class="card archive-item" data-title="memoria permanente claude" data-desc="memory oltre le sessioni" data-cat="Architetture">
-    <span class="tag cat">Architetture</span>
-    <h3><a href="guides/memoria-permanente.html">Memoria permanente per Claude</a></h3>
-    <p>Come dare a Claude una memoria che sopravvive a sessioni, provider e cambi di device.</p>
-   </div>
-
-   <div class="card archive-item" data-title="stop chiedere riassunti" data-desc="prompt alternativi al riassumi" data-cat="Prompt">
-    <span class="tag cat">Prompt</span>
-    <h3><a href="guides/stop-riassunti.html">Smetti di chiedere ad AI di riassumere</a></h3>
-    <p>Quattro prompt alternativi che producono più valore di un riassunto generico.</p>
-   </div>
-
-   <div class="card archive-item" data-title="toolstack 2026" data-desc="12 tool sostituiti nel 2026" data-cat="Prompt">
-    <span class="tag cat">Prompt</span>
-    <h3><a href="guides/toolstack-2026.html">Toolstack AI del 2026</a></h3>
-    <p>I dodici tool sostituiti nella mia catena 2026, categoria per categoria.</p>
-   </div>
-
-   <div class="card archive-item" data-title="cinque giorni roadmap" data-desc="roadmap claude in cinque giorni" data-cat="Claude Base">
-    <span class="tag cat">Claude Base</span>
-    <h3><a href="guides/5-day-roadmap.html">Roadmap Claude in cinque giorni</a></h3>
-    <p>Piano operativo: cosa fare ogni giorno per essere produttivo con Claude in una settimana.</p>
-   </div>
-
-   <div class="card archive-item" data-title="3 modalità agente" data-desc="modalità agente claude code" data-cat="Architetture">
-    <span class="tag cat">Architetture</span>
-    <h3><a href="guides/3-modalita-agente.html">Le 3 modalità di Claude Code</a></h3>
-    <p>Quando usare la modalità chat, quando entrare in Code, quando attivare la modalità agente.</p>
-   </div>
-
-   <div class="card archive-item" data-title="claude content system" data-desc="sistema di creazione contenuti" data-cat="Prompt">
-    <span class="tag cat">Prompt</span>
-    <h3><a href="guides/claude-content-system.html">Claude Content System</a></h3>
-    <p>Un sistema di prompting per creare un mese di contenuti per canali diversi in poche ore.</p>
-   </div>
-
-   <div class="card archive-item" data-title="anthropic academy" data-desc="corso ufficiale claude" data-cat="Claude Base">
-    <span class="tag cat">Claude Base</span>
-    <h3><a href="guides/anthropic-academy.html">Anthropic Academy</a></h3>
-    <p>Come usare i corsi ufficiali di Anthropic per imparare Claude 101 e Claude API.</p>
-   </div>
-
-   <div class="card archive-item" data-title="apify claude" data-desc="scraping dati per claude" data-cat="Setup">
-    <span class="tag cat">Setup</span>
-    <h3><a href="guides/apify-claude.html">Apify per Claude</a></h3>
-    <p>Recuperare dati pubblici dal web dentro Claude tramite Apify MCP, in modo legale e ripetibile.</p>
-   </div>
-
-   <div class="card archive-item" data-title="6 mcp server" data-desc="sei server mcp di base" data-cat="Setup">
-    <span class="tag cat">Setup</span>
-    <h3><a href="guides/6-mcp-server.html">Sei MCP server da configurare oggi</a></h3>
-    <p>I sei server MCP che rendono Claude davvero operativo: filesystem, GitHub, Apify, Notion, browser e database.</p>
-   </div>
-
-   <div class="card archive-item" data-title="10 agenti finanza" data-desc="agenti claude per finanza" data-cat="Architetture">
-    <span class="tag cat">Architetture</span>
-    <h3><a href="guides/10-agenti-finanza.html">Dieci agenti Claude per la finanza personale</a></h3>
-    <p>Una libreria pronta di dieci agenti specializzati per budgeting, investimenti e reportistica.</p>
-   </div>
-
-   <div class="card archive-item" data-title="consiglio agenti" data-desc="board of advisers agenti" data-cat="Team">
-    <span class="tag cat">Team</span>
-    <h3><a href="guides/board-agenti.html">Board of Advisers di agenti Claude</a></h3>
-    <p>Un consiglio di amministrazione di agenti che discute e decide al posto tuo.</p>
-   </div>
-
-   <div class="card archive-item" data-title="claude council prompt" data-desc="consiglio di prompt" data-cat="Team">
-    <span class="tag cat">Team</span>
-    <h3><a href="guides/claude-council.html">Claude Council</a></h3>
-    <p>Un mini-consiglio di prompt specialisti per stress-testare le tue idee prima di pubblicarle.</p>
-   </div>
-
-   <div class="card archive-item" data-title="canva claude" data-desc="integrazione canva claude" data-cat="Setup">
-    <span class="tag cat">Setup</span>
-    <h3><a href="guides/canva-claude.html">Integrare Canva con Claude</a></h3>
-    <p>Da prompt a grafica pronta: pipeline Claude → Canva via MCP, con template brandizzati.</p>
-   </div>
-
-   <div class="card archive-item" data-title="audit instagram prompt" data-desc="analisi profilo instagram" data-cat="Prompt">
-    <span class="tag cat">Prompt</span>
-    <h3><a href="guides/audit-instagram.html">Audit Instagram con Claude</a></h3>
-    <p>Prompt di audit per trasformare un profilo Instagram in una lista di azioni concrete.</p>
-   </div>
-
-   <div class="card archive-item" data-title="token limit hacks" data-desc="ridurre consumo token" data-cat="Prompt">
-    <span class="tag cat">Prompt</span>
-    <h3><a href="guides/token-limit-hacks.html">Hacks per il limite di token</a></h3>
-    <p>Tecniche per risparmiare token su input e output senza perdere qualità.</p>
-   </div>
-
-   <div class="card archive-item" data-title="face lock gemini" data-desc="conservare identità" data-cat="Prompt">
-    <span class="tag cat">Prompt</span>
-    <h3><a href="guides/face-lock-gemini.html">Face-lock con Gemini</a></h3>
-    <p>Mantenere la stessa identità visiva attraverso molte immagini generate.</p>
-   </div>
-
-   <div class="card archive-item" data-title="photo enhancer" data-desc="migliorare foto con ai" data-cat="Prompt">
-    <span class="tag cat">Prompt</span>
-    <h3><a href="guides/photo-enhancer.html">Photo Enhancer con AI</a></h3>
-    <p>Prompt e tool per migliorare luci, colori e nitidezza delle foto con l'AI.</p>
-   </div>
-
-   <div class="card archive-item" data-title="claude umano" data-desc="rendere claude umano nei testi" data-cat="Prompt">
-    <span class="tag cat">Prompt</span>
-    <h3><a href="guides/claude-umano.html">Rendere Claude più umano</a></h3>
-    <p>Quattro interventi di stile per togliere il "odore di AI" dai tuoi testi senza sacrificare la precisione.</p>
-   </div>
-
-   <div class="card archive-item" data-title="claude gratis" data-desc="usare claude senza pagare" data-cat="Claude Base">
-    <span class="tag cat">Claude Base</span>
-    <h3><a href="guides/claude-gratis.html">Usare Claude gratis (e bene)</a></h3>
-    <p>Tutti i modi per usare Claude senza pagare, mantenendo qualità e limiti sotto controllo.</p>
-   </div>
-
-   <div class="card archive-item" data-title="best ai tools 2026" data-desc="i migliori tool ai" data-cat="Prompt">
-    <span class="tag cat">Prompt</span>
-    <h3><a href="guides/best-ai-tools-2026.html">I migliori tool AI del 2026</a></h3>
-    <p>Una selezione ragionata dei tool che vale la pena imparare nel 2026.</p>
-   </div>
-
-   <div class="card archive-item" data-title="6 design tools" data-desc="tool di design con ai" data-cat="Setup">
-    <span class="tag cat">Setup</span>
-    <h3><a href="guides/6-design-tools.html">Sei tool di design con AI</a></h3>
-    <p>I sei tool che compongono una pipeline di design assistita completa.</p>
-   </div>
-
+   <article class="archive-item" data-cat="claude-base" data-search="smetti di caricare pdf su claude: usa markitdown converti pdf, word, powerpoint e excel in markdown pulito con markitdown di microsoft. meno token, risposte più precise, setup desktop in cinque minuti.">
+   <span class="tag cat">Claude Base</span>
+   <h3><a href="guides/stop-pdf-claude.html">Smetti di caricare PDF su Claude: usa MarkItDown</a></h3>
+   <p>Converti PDF, Word, PowerPoint e Excel in Markdown pulito con MarkItDown di Microsoft. Meno token, risposte più precise, setup Desktop in cinque minuti.</p>
+  </article>
+<article class="archive-item" data-cat="claude-base" data-search="le 11 guide gratuite per imparare claude, in ordine il percorso curato da giorgio gnoli: 11 guide gratuite per padroneggiare claude e claude code, in ordine di difficoltà.">
+   <span class="tag cat">Claude Base</span>
+   <h3><a href="guides/impara-claude-gratis.html">Le 11 guide gratuite per imparare Claude, in ordine</a></h3>
+   <p>Il percorso curato da Giorgio Gnoli: 11 guide gratuite per padroneggiare Claude e Claude Code, in ordine di difficoltà.</p>
+  </article>
+<article class="archive-item" data-cat="architetture" data-search="harness engineering, spiegato bene le tre ere dell’ingegneria dell’ai e le cinque parti che trasformano un chatbot in un lavoratore: modello, contesto, strumenti, loop, osservabilità.">
+   <span class="tag cat">Architetture</span>
+   <h3><a href="guides/harness-engineering.html">Harness Engineering, spiegato bene</a></h3>
+   <p>Le tre ere dell’ingegneria dell’AI e le cinque parti che trasformano un chatbot in un lavoratore: modello, contesto, strumenti, loop, osservabilità.</p>
+  </article>
+<article class="archive-item" data-cat="architetture" data-search="loop engineering: guida completa dai prompt ai loop. quattro ere dell’ingegneria ai e le sei parti del loop agentico anthropic per costruire agenti claude robusti.">
+   <span class="tag cat">Architetture</span>
+   <h3><a href="guides/loop-engineering.html">Loop Engineering: guida completa</a></h3>
+   <p>Dai prompt ai loop. Quattro ere dell’ingegneria AI e le sei parti del loop agentico Anthropic per costruire agenti Claude robusti.</p>
+  </article>
+<article class="archive-item" data-cat="team" data-search="claude for teams: setup completo senza enterprise due strade per portare un team intero su claude: organizzazione (chat + cowork) o un repo github unico con claude code. click-paths e ruoli.">
+   <span class="tag cat">Team</span>
+   <h3><a href="guides/claude-per-team.html">Claude for Teams: setup completo senza Enterprise</a></h3>
+   <p>Due strade per portare un team intero su Claude: organizzazione (Chat + Cowork) o un repo GitHub unico con Claude Code. Click-paths e ruoli.</p>
+  </article>
+<article class="archive-item" data-cat="setup" data-search="collega 33 connettori mcp a claude i connettori mcp più utili per marketing, sales, analytics, storage, social e database. setup one-click e configurazione custom, con link per ogni connettore.">
+   <span class="tag cat">Setup</span>
+   <h3><a href="guides/connettori-mcp.html">Collega 33 connettori MCP a Claude</a></h3>
+   <p>I connettori MCP più utili per marketing, sales, analytics, storage, social e database. Setup one-click e configurazione custom, con link per ogni connettore.</p>
+  </article>
+<article class="archive-item" data-cat="setup" data-search="configurare claude design in cinque passi crea workspace, carica il brand kit, scegli template e genera il primo progetto con claude design.">
+   <span class="tag cat">Setup</span>
+   <h3><a href="guides/setup-claude-design.html">Configurare Claude Design in cinque passi</a></h3>
+   <p>Crea workspace, carica il brand kit, scegli template e genera il primo progetto con Claude Design.</p>
+  </article>
+<article class="archive-item" data-cat="prompt" data-search="claude carousel generator: prompt riutilizzabile prompt che trasforma claude in un designer di carousel on-brand per instagram e linkedin. imposta colori e font una sola volta.">
+   <span class="tag cat">Prompt</span>
+   <h3><a href="guides/carousel-generator.html">Claude Carousel Generator: prompt riutilizzabile</a></h3>
+   <p>Prompt che trasforma Claude in un designer di carousel on-brand per Instagram e LinkedIn. Imposta colori e font una sola volta.</p>
+  </article>
+<article class="archive-item" data-cat="claude-base" data-search="tutti i 118 comandi di claude code reference completo dei comandi slash di claude code: cosa fanno, quando usarli, esempi di output.">
+   <span class="tag cat">Claude Base</span>
+   <h3><a href="guides/118-comandi-claude-code.html">Tutti i 118 comandi di Claude Code</a></h3>
+   <p>Reference completo dei comandi slash di Claude Code: cosa fanno, quando usarli, esempi di output.</p>
+  </article>
+<article class="archive-item" data-cat="claude-base" data-search="la tua prima skill su claude cos’è una skill, dove salvarla, come testarla e come iterarla in dieci minuti.">
+   <span class="tag cat">Claude Base</span>
+   <h3><a href="guides/primaskill-claude.html">La tua prima Skill su Claude</a></h3>
+   <p>Cos’è una Skill, dove salvarla, come testarla e come iterarla in dieci minuti.</p>
+  </article>
+<article class="archive-item" data-cat="claude-base" data-search="cinque skill bonus da installare subito una selezione di cinque skill che uso ogni settimana. copia, installa, personalizza.">
+   <span class="tag cat">Claude Base</span>
+   <h3><a href="guides/top-5-skills.html">Cinque Skill bonus da installare subito</a></h3>
+   <p>Una selezione di cinque Skill che uso ogni settimana. Copia, installa, personalizza.</p>
+  </article>
+<article class="archive-item" data-cat="claude-base" data-search="le 53 skill più utili una classifica ragionata delle 53 skill che fanno risparmiare più tempo ogni settimana, divise per area.">
+   <span class="tag cat">Claude Base</span>
+   <h3><a href="guides/top-53-skills.html">Le 53 Skill più utili</a></h3>
+   <p>Una classifica ragionata delle 53 Skill che fanno risparmiare più tempo ogni settimana, divise per area.</p>
+  </article>
+<article class="archive-item" data-cat="setup" data-search="cowork os: setup desktop passo per passo installazione e configurazione di cowork os su mac, linux e windows. permessi, cartelle locali, memoria.">
+   <span class="tag cat">Setup</span>
+   <h3><a href="guides/cowork-os-setup.html">Cowork OS: setup desktop passo per passo</a></h3>
+   <p>Installazione e configurazione di Cowork OS su Mac, Linux e Windows. Permessi, cartelle locali, memoria.</p>
+  </article>
+<article class="archive-item" data-cat="architetture" data-search="memoria permanente per claude tre strategie combinabili per dare a claude una memoria che sopravvive a sessioni, provider e cambi di device.">
+   <span class="tag cat">Architetture</span>
+   <h3><a href="guides/memoria-permanente.html">Memoria permanente per Claude</a></h3>
+   <p>Tre strategie combinabili per dare a Claude una memoria che sopravvive a sessioni, provider e cambi di device.</p>
+  </article>
+<article class="archive-item" data-cat="prompt" data-search="smetti di chiedere ad ai di riassumere quattro prompt alternativi che producono più valore del classico riassumi questo pdf, spiegati con esempi concreti.">
+   <span class="tag cat">Prompt</span>
+   <h3><a href="guides/stop-riassunti.html">Smetti di chiedere ad AI di riassumere</a></h3>
+   <p>Quattro prompt alternativi che producono più valore del classico riassumi questo PDF, spiegati con esempi concreti.</p>
+  </article>
+<article class="archive-item" data-cat="prompt" data-search="toolstack ai del 2026 i dodici tool che ho sostituito nella mia catena operativa nel 2026. categorie, alternative, motivi del cambio.">
+   <span class="tag cat">Prompt</span>
+   <h3><a href="guides/toolstack-2026.html">Toolstack AI del 2026</a></h3>
+   <p>I dodici tool che ho sostituito nella mia catena operativa nel 2026. Categorie, alternative, motivi del cambio.</p>
+  </article>
+<article class="archive-item" data-cat="claude-base" data-search="roadmap claude in cinque giorni piano operativo per essere produttivo con claude in una settimana. cosa fare ogni giorno.">
+   <span class="tag cat">Claude Base</span>
+   <h3><a href="guides/5-day-roadmap.html">Roadmap Claude in cinque giorni</a></h3>
+   <p>Piano operativo per essere produttivo con Claude in una settimana. Cosa fare ogni giorno.</p>
+  </article>
+<article class="archive-item" data-cat="architetture" data-search="le 3 modalità di claude code quando usare la chat, quando entrare in code, quando attivare la modalità agente. differenze, limiti, esempi.">
+   <span class="tag cat">Architetture</span>
+   <h3><a href="guides/3-modalita-agente.html">Le 3 modalità di Claude Code</a></h3>
+   <p>Quando usare la chat, quando entrare in Code, quando attivare la modalità agente. Differenze, limiti, esempi.</p>
+  </article>
+<article class="archive-item" data-cat="architetture" data-search="sub-agent in claude code: come e quando lanciarli i sub-agent permettono di parallelizzare task indipendenti. setup, limiti, esempi pratici.">
+   <span class="tag cat">Architetture</span>
+   <h3><a href="guides/sub-agent-claude.html">Sub-agent in Claude Code: come e quando lanciarli</a></h3>
+   <p>I sub-agent permettono di parallelizzare task indipendenti. Setup, limiti, esempi pratici.</p>
+  </article>
+<article class="archive-item" data-cat="setup" data-search="setup mcp in italiano: guida pratica procedura passo per passo per configurare il tuo primo connettore mcp con un esempio italiano end-to-end.">
+   <span class="tag cat">Setup</span>
+   <h3><a href="guides/connector-setup-italiano.html">Setup MCP in italiano: guida pratica</a></h3>
+   <p>Procedura passo per passo per configurare il tuo primo connettore MCP con un esempio italiano end-to-end.</p>
+  </article>
+<article class="archive-item" data-cat="prompt" data-search="claude content system: un mese di contenuti in poche ore sistema di prompting per generare un mese di contenuti per più canali con voce coerente.">
+   <span class="tag cat">Prompt</span>
+   <h3><a href="guides/claude-content-system.html">Claude Content System: un mese di contenuti in poche ore</a></h3>
+   <p>Sistema di prompting per generare un mese di contenuti per più canali con voce coerente.</p>
+  </article>
+<article class="archive-item" data-cat="claude-base" data-search="anthropic academy: come usarla bene i corsi ufficiali anthropic, dove trovarli, come sfruttarli al massimo senza perdere la motivazione.">
+   <span class="tag cat">Claude Base</span>
+   <h3><a href="guides/anthropic-academy.html">Anthropic Academy: come usarla bene</a></h3>
+   <p>I corsi ufficiali Anthropic, dove trovarli, come sfruttarli al massimo senza perdere la motivazione.</p>
+  </article>
+<article class="archive-item" data-cat="setup" data-search="apify per claude: scraping legale e ripetibile recuperare dati pubblici dal web dentro claude tramite apify mcp, in modo legale, etico, ripetibile.">
+   <span class="tag cat">Setup</span>
+   <h3><a href="guides/apify-claude.html">Apify per Claude: scraping legale e ripetibile</a></h3>
+   <p>Recuperare dati pubblici dal web dentro Claude tramite Apify MCP, in modo legale, etico, ripetibile.</p>
+  </article>
+<article class="archive-item" data-cat="setup" data-search="sei mcp server da configurare oggi una selezione ragionata di sei mcp server che coprono i casi d’uso più comuni.">
+   <span class="tag cat">Setup</span>
+   <h3><a href="guides/6-mcp-server.html">Sei MCP server da configurare oggi</a></h3>
+   <p>Una selezione ragionata di sei MCP server che coprono i casi d’uso più comuni.</p>
+  </article>
+<article class="archive-item" data-cat="prompt" data-search="prompt per generare foto con claude image anatomia di un prompt efficace per generazione immagini con claude, con esempi di iterazione.">
+   <span class="tag cat">Prompt</span>
+   <h3><a href="guides/claude-prompt-per-foto.html">Prompt per generare foto con Claude Image</a></h3>
+   <p>Anatomia di un prompt efficace per generazione immagini con Claude, con esempi di iterazione.</p>
+  </article>
+<article class="archive-item" data-cat="prompt" data-search="audit del profilo instagram con claude procedura di audit in cinque passi per analizzare un profilo instagram e produrre un report di miglioramento.">
+   <span class="tag cat">Prompt</span>
+   <h3><a href="guides/instagram-audit.html">Audit del profilo Instagram con Claude</a></h3>
+   <p>Procedura di audit in cinque passi per analizzare un profilo Instagram e produrre un report di miglioramento.</p>
+  </article>
+<article class="archive-item" data-cat="prompt" data-search="council di prompt: il prompt migliore vince tecnica per generare più varianti dello stesso prompt, valutarle, scegliere la migliore.">
+   <span class="tag cat">Prompt</span>
+   <h3><a href="guides/council-prompt.html">Council di prompt: il prompt migliore vince</a></h3>
+   <p>Tecnica per generare più varianti dello stesso prompt, valutarle, scegliere la migliore.</p>
+  </article>
+<article class="archive-item" data-cat="team" data-search="consiglio di amministrazione di agenti claude come gestire un team di agenti claude paralleli con ruoli, priorità e governance.">
+   <span class="tag cat">Team</span>
+   <h3><a href="guides/agent-board.html">Consiglio di amministrazione di agenti Claude</a></h3>
+   <p>Come gestire un team di agenti Claude paralleli con ruoli, priorità e governance.</p>
+  </article>
+<article class="archive-item" data-cat="claude-base" data-search="claude in italiano: come ottenere il massimo suggerimenti pratici per prompt, skill e conversazioni in italiano tecnico.">
+   <span class="tag cat">Claude Base</span>
+   <h3><a href="guides/claude-italiano.html">Claude in italiano: come ottenere il massimo</a></h3>
+   <p>Suggerimenti pratici per prompt, Skill e conversazioni in italiano tecnico.</p>
+  </article>
+<article class="archive-item" data-cat="prompt" data-search="rendere claude più umano nei testi quattro interventi di stile per togliere l’odore di ai dai testi senza sacrificare la precisione.">
+   <span class="tag cat">Prompt</span>
+   <h3><a href="guides/claude-umano.html">Rendere Claude più umano nei testi</a></h3>
+   <p>Quattro interventi di stile per togliere l’odore di AI dai testi senza sacrificare la precisione.</p>
+  </article>
+<article class="archive-item" data-cat="claude-base" data-search="usare claude gratis (e bene) tutti i modi per usare claude senza pagare, mantenendo qualità e gestendo i limiti.">
+   <span class="tag cat">Claude Base</span>
+   <h3><a href="guides/claude-gratis.html">Usare Claude gratis (e bene)</a></h3>
+   <p>Tutti i modi per usare Claude senza pagare, mantenendo qualità e gestendo i limiti.</p>
+  </article>
+<article class="archive-item" data-cat="prompt" data-search="i migliori tool ai del 2026 una selezione ragionata dei tool che vale la pena imparare nel 2026, divisi per area.">
+   <span class="tag cat">Prompt</span>
+   <h3><a href="guides/best-ai-tools-2026.html">I migliori tool AI del 2026</a></h3>
+   <p>Una selezione ragionata dei tool che vale la pena imparare nel 2026, divisi per area.</p>
+  </article>
+<article class="archive-item" data-cat="setup" data-search="sei tool di design con ai i sei tool che compongono una pipeline di design assistita completa, con costi e ruoli.">
+   <span class="tag cat">Setup</span>
+   <h3><a href="guides/6-design-tools.html">Sei tool di design con AI</a></h3>
+   <p>I sei tool che compongono una pipeline di design assistita completa, con costi e ruoli.</p>
+  </article>
+<article class="archive-item" data-cat="prompt" data-search="dieci agenti claude per la finanza personale una libreria di dieci agenti specializzati per gestire le finanze personali con claude e mcp.">
+   <span class="tag cat">Prompt</span>
+   <h3><a href="guides/10-agenti-finanza.html">Dieci agenti Claude per la finanza personale</a></h3>
+   <p>Una libreria di dieci agenti specializzati per gestire le finanze personali con Claude e MCP.</p>
+  </article>
   </div>
  </div>
 </section>
@@ -260,12 +234,39 @@
   </div>
   <div>
    <a href="chi-sono.html">Chi sono</a> ·
-   <a href="index.html">Home</a> ·
-   <a href="categorie/index.html">Categorie</a>
+   <a href="categorie/index.html">Categorie</a> ·
+   <a href="index.html">Home</a>
   </div>
  </div>
 </footer>
 
 <script src="assets/js/main.js"></script>
+<script>
+(function(){
+  const input = document.getElementById('archiveSearch');
+  const items = document.querySelectorAll('.archive-item');
+  const chips = document.querySelectorAll('.chip[data-filter]');
+  let activeFilter = 'all';
+  function apply(){
+    const q = (input.value||'').toLowerCase();
+    items.forEach(it=>{
+      const cat = it.dataset.cat;
+      const txt = it.dataset.search;
+      const matchesCat = activeFilter==='all' || cat===activeFilter;
+      const matchesText = !q || txt.indexOf(q)>=0;
+      it.style.display = (matchesCat && matchesText) ? '' : 'none';
+    });
+  }
+  input.addEventListener('input', apply);
+  chips.forEach(c=>c.addEventListener('click', e=>{
+    e.preventDefault();
+    chips.forEach(x=>x.classList.remove('active-filter'));
+    c.classList.add('active-filter');
+    activeFilter = c.dataset.filter;
+    apply();
+  }));
+  chips[0].classList.add('active-filter');
+})();
+</script>
 </body>
 </html>

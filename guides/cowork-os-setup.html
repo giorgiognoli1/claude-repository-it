@@ -6,8 +6,8 @@
 <title>Cowork OS: setup desktop passo per passo — Claude & Claude Code | Giorgio Gnoli</title>
 <meta name="description" content="Installazione e configurazione di Cowork OS su Mac, Linux e Windows. Permessi, cartelle locali, memoria.">
 <meta name="author" content="Giorgio Gnoli">
-<meta name="keywords" content="Claude, Claude Code, Setup, guida italiana, Giorgio Gnoli">
-<link rel="canonical" href="https://claude.giorgiognoli.it/guides/cowork-os-setup.html">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://giorgiognoli1.github.io/claude-repository-it/guides/cowork-os-setup.html">
 <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
@@ -32,27 +32,44 @@
 <section class="category-cover">
  <div class="wrap">
   <p class="breadcrumb"><a href="../index.html">Home</a> / <a href="../archivio.html">Archivio</a> / <a href="../categorie/index.html">Categorie</a> / <a href="../categorie/setup.html">Setup</a></p>
-  <p class="kicker">Setup</p>
+  <p class="kicker">Setup · Guida operativa</p>
   <h1>Cowork OS: setup desktop passo per passo</h1>
   <p class="lead">Installazione e configurazione di Cowork OS su Mac, Linux e Windows. Permessi, cartelle locali, memoria.</p>
-  <p class="meta">A cura di Giorgio Gnoli · Guida operativa, licenza libera con attribuzione.</p>
+  <p class="meta-line">A cura di Giorgio Gnoli · 8 sezioni</p>
  </div>
 </section>
 
 <section>
  <div class="wrap layout">
   <article class="guide">
-   <p>Cos'è Cowork OS|Cowork OS è la modalità desktop di Claude che lavora direttamente sulle tue cartelle locali con gli stessi permessi tuoi. È il modo più potente per fare Claude lavorare sui tuoi file veri, senza upload ripetuti.|Requisiti|Mac: macOS 12+, Claude Desktop aggiornato. Linux: Ubuntu 20+ o equivalente, Python 3.10+. Windows: Windows 10+, PowerShell 7. Tutti: almeno 8 GB di RAM, 2 GB liberi su disco.|Installazione Mac|Scarica Claude Desktop da claude.ai. Apri System Settings → Privacy &amp; Security → Accessibility e concedi accesso. Apri Cowork dal menu laterale.|Installazione Linux|`curl -L https://claude.ai/cowork/install.sh | bash`<br>`sudo systemctl enable --now claude-cowork`|Installazione Windows|Scarica l'installer. Apri PowerShell come amministratore e lancia `Enable-ClaudeCowork.ps1`. Configura cartelle condivise.|Cartelle locali|Per default Cowork accede a `~/Documents`, `~/Desktop`, `~/Downloads`. Puoi aggiungere cartelle custom in Settings → Cowork → Permissions.|Memoria locale|Cowork mantiene una memoria locale delle tue decisioni ricorrenti. Puoi esportarla e trasferirla a un altro device via `cowork export memory`.|Sicurezza|Non concedere accesso a cartelle con dati finanziari o sanitari senza un audit intermedio. Ogni tanto verifica la lista di file toccati in Settings → Activity.</p>
-   <hr style="margin-top:2em;border:0;border-top:1px solid var(--border)">
-   <p style="color:var(--muted);font-size:.9rem">Hai trovato utile questa guida? Torna all'<a href="../archivio.html">archivio completo</a> o naviga per <a href="../categorie/index.html">categoria</a>.</p>
+<h2 id="sec-lead">Sintesi</h2>
+<p class="lead">Installazione e configurazione di Cowork OS su Mac, Linux e Windows. Permessi, cartelle locali, memoria.</p>
+<h2 id="definizione">Cos’è Cowork OS</h2>
+<p>Cowork OS è la modalità desktop di Claude che lavora direttamente sulle tue cartelle locali con gli stessi permessi tuoi. È il modo più potente per fare Claude lavorare sui tuoi file veri, senza upload ripetuti e senza esportare manualmente i dati.</p>
+<h2 id="requisiti">Requisiti</h2>
+<ul><li>Mac — macOS 12+, Claude Desktop aggiornato.</li><li>Linux — Ubuntu 20+ o equivalente, Python 3.10+.</li><li>Windows — Windows 10+, PowerShell 7.</li><li>Tutti — almeno 8 GB di RAM, 2 GB liberi su disco.</li></ul>
+<h2 id="installazione-mac">Installazione Mac</h2>
+<ol><li>Scarica Claude Desktop da claude.ai.</li><li>Apri System Settings → Privacy &amp; Security → Accessibility e concedi accesso.</li><li>Apri Cowork dal menu laterale di Claude Desktop.</li></ol>
+<h2 id="installazione-linux">Installazione Linux</h2>
+<pre><code>curl -L https://claude.ai/cowork/install.sh | bash
+sudo systemctl enable --now claude-cowork</code></pre>
+<h2 id="installazione-windows">Installazione Windows</h2>
+<ol><li>Scarica l’installer dal sito ufficiale.</li><li>Apri PowerShell come amministratore.</li><li>Lancia Enable-ClaudeCowork.ps1.</li><li>Configura le cartelle condivise.</li></ol>
+<h2 id="cartelle">Cartelle locali</h2>
+<p>Per default Cowork accede a ~/Documents, ~/Desktop, ~/Downloads. Puoi aggiungere cartelle custom in Settings → Cowork → Permissions.</p>
+<h2 id="memoria">Memoria locale</h2>
+<p>Cowork mantiene una memoria locale delle tue decisioni ricorrenti. Puoi esportarla e trasferirla a un altro device con cowork export memory.</p>
+<h2 id="sicurezza">Sicurezza</h2>
+<p>Non concedere accesso a cartelle con dati finanziari o sanitari senza un audit intermedio. Ogni tanto verifica la lista di file toccati in Settings → Activity.</p>
+<hr>
+<p class="foot-link">Hai trovato utile questa guida? Torna all'<a href="../archivio.html">archivio completo</a> o naviga per <a href="../categorie/index.html">categoria</a>.</p>
   </article>
   <aside class="toc">
-   <h4>Indice</h4>
-   
-   <h4 style="margin-top:14px">Categoria</h4>
+   <h4>In questa guida</h4><a href="#sec-lead">Sintesi</a><a href="#definizione">Cos’è Cowork OS</a><a href="#requisiti">Requisiti</a><a href="#installazione-mac">Installazione Mac</a><a href="#installazione-linux">Installazione Linux</a><a href="#installazione-windows">Installazione Windows</a><a href="#cartelle">Cartelle locali</a><a href="#memoria">Memoria locale</a><a href="#sicurezza">Sicurezza</a>
+   <h4 style="margin-top:18px">Categoria</h4>
    <a href="../categorie/setup.html">Setup</a>
-   <h4 style="margin-top:14px">Altre guide</h4>
-   <a href="../archivio.html">Archivio</a>
+   <h4 style="margin-top:18px">Naviga</h4>
+   <a href="../archivio.html">Archivio completo</a>
    <a href="../index.html">Home</a>
   </aside>
  </div>

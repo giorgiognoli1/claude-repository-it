@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Claude for Teams: setup completo senza Enterprise — Claude & Claude Code | Giorgio Gnoli</title>
-<meta name="description" content="Due strade per portare un team intero su Claude: organizzazione (Chat + Cowork admin) o un repo GitHub unico con Claude Code. Click-paths e ruoli.">
+<meta name="description" content="Due strade per portare un team intero su Claude: organizzazione (Chat + Cowork) o un repo GitHub unico con Claude Code. Click-paths e ruoli.">
 <meta name="author" content="Giorgio Gnoli">
-<meta name="keywords" content="Claude, Claude Code, Team, guida italiana, Giorgio Gnoli">
-<link rel="canonical" href="https://claude.giorgiognoli.it/guides/claude-per-team.html">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://giorgiognoli1.github.io/claude-repository-it/guides/claude-per-team.html">
 <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
@@ -32,27 +32,45 @@
 <section class="category-cover">
  <div class="wrap">
   <p class="breadcrumb"><a href="../index.html">Home</a> / <a href="../archivio.html">Archivio</a> / <a href="../categorie/index.html">Categorie</a> / <a href="../categorie/team.html">Team</a></p>
-  <p class="kicker">Team</p>
+  <p class="kicker">Team · Guida operativa</p>
   <h1>Claude for Teams: setup completo senza Enterprise</h1>
-  <p class="lead">Due strade per portare un team intero su Claude: organizzazione (Chat + Cowork admin) o un repo GitHub unico con Claude Code. Click-paths e ruoli.</p>
-  <p class="meta">A cura di Giorgio Gnoli · Guida operativa, licenza libera con attribuzione.</p>
+  <p class="lead">Due strade per portare un team intero su Claude: organizzazione (Chat + Cowork) o un repo GitHub unico con Claude Code. Click-paths e ruoli.</p>
+  <p class="meta-line">A cura di Giorgio Gnoli · 6 sezioni</p>
  </div>
 </section>
 
 <section>
  <div class="wrap layout">
   <article class="guide">
-   <p>Le due strade|Strada A — Organizzazione Claude. Configuri Chat e Cowork con ruoli admin e member. Strada B — Repo GitHub unico. Tutti i membri del team si collegano via Claude Code e condividono prompt, Skills e workflow tramite Git. La prima è più semplice da avviare, la seconda è più scalabile e più economica sul lungo periodo.|Strada A passo per passo|1. Crea un workspace su claude.ai dal tuo account admin. 2. Invita i membri via email. 3. Assegna ruoli: admin (gestione billing, ruoli, workspace), member (uso completo), reader (sola lettura). 4. Attiva Cowork per i member richiesti. 5. Definisci una libreria condivisa di Skills tramite la cartella `~/.claude/skills/`.|Strada B passo per passo|1. Crea un repo `team-claude` su GitHub. 2. Aggiungi `CLAUDE.md` con istruzioni condivise, preferenze di coding, standard di testing. 3. Aggiungi la cartella `.claude/skills/` con le Skill di team. 4. Aggiungi `.claude/mcp.json` con i connettori condivisi. 5. I membri clonano il repo, lanciano Claude Code, hanno immediatamente lo stesso ambiente.|I quattro ruoli|Anche senza Enterprise puoi definire quattro ruoli chiari. Tech Lead (decide architetture). Prompt Engineer (mantiene Skills e prompt library). Reviewer (verifica output, fa QA). Operativo (usa gli strumenti, produce deliverable).|Il loop build → push → invite → pull|Sviluppatore lavora in locale → pusha la modifica su Git → apre PR → reviewer approva → admin fa merge → tutti fanno pull e hanno la nuova versione. Stessa loop che usi per il codice, applicata ai prompt.|Sicurezza|Anche senza Enterprise, privacy e segreti vanno gestiti: niente API key nei file, usa `.env` con `.gitignore`. Niente dati sensibili nei prompt di test. Audit mensile delle Skills caricate.</p>
-   <hr style="margin-top:2em;border:0;border-top:1px solid var(--border)">
-   <p style="color:var(--muted);font-size:.9rem">Hai trovato utile questa guida? Torna all'<a href="../archivio.html">archivio completo</a> o naviga per <a href="../categorie/index.html">categoria</a>.</p>
+<h2 id="sec-lead">Sintesi</h2>
+<p class="lead">Due strade per portare un team intero su Claude: organizzazione (Chat + Cowork) o un repo GitHub unico con Claude Code. Click-paths e ruoli.</p>
+<h2 id="due-strade">Le due strade</h2>
+<p>Servono due strade complementari. La prima è più semplice da avviare, la seconda è più scalabile e più economica sul lungo periodo.</p>
+<h3>Strada A — organizzazione Claude</h3>
+<p>Configuri Chat e Cowork con ruoli admin e member. Veloce, senza tool esterni.</p>
+<h3>Strada B — repo GitHub unico</h3>
+<p>Tutti i membri del team si collegano via Claude Code e condividono prompt, Skill e workflow tramite Git. È una vera libreria condivisa.</p>
+<h2 id="strada-a">Strada A passo per passo</h2>
+<ol><li>Crea un workspace su claude.ai dal tuo account admin.</li><li>Invita i membri via email.</li><li>Assegna ruoli: admin (billing, ruoli, workspace), member (uso completo), reader (sola lettura).</li><li>Attiva Cowork per i member che ne hanno bisogno.</li><li>Definisci una libreria condivisa di Skill tramite la cartella ~/.claude/skills/.</li></ol>
+<h2 id="strada-b">Strada B passo per passo</h2>
+<ol><li>Crea un repo team-claude su GitHub.</li><li>Aggiungi CLAUDE.md con istruzioni condivise, preferenze di coding, standard di testing.</li><li>Aggiungi la cartella .claude/skills/ con le Skill di team.</li><li>Aggiungi .mcp.json con i connettori condivisi.</li><li>I membri clonano il repo, lanciano Claude Code, e hanno immediatamente lo stesso ambiente.</li></ol>
+<h2 id="quattro-ruoli">I quattro ruoli operativi</h2>
+<p>Anche senza Enterprise puoi definire quattro ruoli chiari nel team.</p>
+<ul><li>Tech Lead — decide architetture, gestisce skill library.</li><li>Prompt Engineer — mantiene Skill e prompt library condivisi.</li><li>Reviewer — verifica output, fa QA, applica standard.</li><li>Operativo — usa gli strumenti, produce deliverable.</li></ul>
+<h2 id="loop-team">Il loop build → push → invite → pull</h2>
+<p>Sviluppatore lavora in locale, pusha su Git, apre Pull Request, il reviewer approva, l’admin fa merge, tutti fanno pull. La stessa loop che usi per il codice, applicata ai prompt e alle Skill.</p>
+<h2 id="sicurezza">Sicurezza</h2>
+<p>Anche senza Enterprise, privacy e segreti vanno gestiti.</p>
+<ul><li>Niente API key nei file — usa .env con .gitignore.</li><li>Niente dati sensibili nei prompt di test.</li><li>Audit mensile delle Skill caricate nel repo.</li></ul>
+<hr>
+<p class="foot-link">Hai trovato utile questa guida? Torna all'<a href="../archivio.html">archivio completo</a> o naviga per <a href="../categorie/index.html">categoria</a>.</p>
   </article>
   <aside class="toc">
-   <h4>Indice</h4>
-   
-   <h4 style="margin-top:14px">Categoria</h4>
+   <h4>In questa guida</h4><a href="#sec-lead">Sintesi</a><a href="#due-strade">Le due strade</a><a href="#strada-a">Strada A passo per passo</a><a href="#strada-b">Strada B passo per passo</a><a href="#quattro-ruoli">I quattro ruoli operativi</a><a href="#loop-team">Il loop build → push → invite → pull</a><a href="#sicurezza">Sicurezza</a>
+   <h4 style="margin-top:18px">Categoria</h4>
    <a href="../categorie/team.html">Team</a>
-   <h4 style="margin-top:14px">Altre guide</h4>
-   <a href="../archivio.html">Archivio</a>
+   <h4 style="margin-top:18px">Naviga</h4>
+   <a href="../archivio.html">Archivio completo</a>
    <a href="../index.html">Home</a>
   </aside>
  </div>

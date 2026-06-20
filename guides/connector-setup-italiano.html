@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sei MCP server da configurare oggi — Claude & Claude Code | Giorgio Gnoli</title>
-<meta name="description" content="Una selezione ragionata di sei MCP server che coprono i casi d’uso più comuni.">
+<title>Setup MCP in italiano: guida pratica — Claude & Claude Code | Giorgio Gnoli</title>
+<meta name="description" content="Procedura passo per passo per configurare il tuo primo connettore MCP con un esempio italiano end-to-end.">
 <meta name="author" content="Giorgio Gnoli">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://giorgiognoli1.github.io/claude-repository-it/guides/6-mcp-server.html">
+<link rel="canonical" href="https://giorgiognoli1.github.io/claude-repository-it/guides/connector-setup-italiano.html">
 <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
@@ -33,9 +33,9 @@
  <div class="wrap">
   <p class="breadcrumb"><a href="../index.html">Home</a> / <a href="../archivio.html">Archivio</a> / <a href="../categorie/index.html">Categorie</a> / <a href="../categorie/setup.html">Setup</a></p>
   <p class="kicker">Setup · Guida operativa</p>
-  <h1>Sei MCP server da configurare oggi</h1>
-  <p class="lead">Una selezione ragionata di sei MCP server che coprono i casi d’uso più comuni.</p>
-  <p class="meta-line">A cura di Giorgio Gnoli · 4 sezioni</p>
+  <h1>Setup MCP in italiano: guida pratica</h1>
+  <p class="lead">Procedura passo per passo per configurare il tuo primo connettore MCP con un esempio italiano end-to-end.</p>
+  <p class="meta-line">A cura di Giorgio Gnoli · 5 sezioni</p>
  </div>
 </section>
 
@@ -43,20 +43,31 @@
  <div class="wrap layout">
   <article class="guide">
 <h2 id="sec-lead">Sintesi</h2>
-<p class="lead">Una selezione ragionata di sei MCP server che coprono i casi d’uso più comuni.</p>
-<h2 id="sei">I sei server</h2>
-<ol><li>Filesystem — accesso controllato a cartelle locali.</li><li>GitHub — lettura issue, PR, file di repo remoti.</li><li>Notion — lettura e scrittura di pagine e database.</li><li>Apify — orchestrazione di scraper pronti.</li><li>Postgres — query SQL in linguaggio naturale.</li><li>Calendar — gestione appuntamenti e lettura eventi.</li></ol>
-<h2 id="ordine">Ordine di setup consigliato</h2>
-<ol><li>Filesystem — il più immediato, zero credenziali esterne.</li><li>GitHub — essenziale per chi sviluppa.</li><li>Notion — perfetto per knowledge worker.</li><li>Apify — per task di ricerca e monitoraggio.</li><li>Postgres — per chiunque abbia un database.</li><li>Calendar — per scheduling intelligente.</li></ol>
-<h2 id="configurazione">Pattern di configurazione</h2>
-<p>Tutti i server MCP seguono lo stesso pattern nel JSON: command, args, env. La principale differenza è il nome del pacchetto npm e le variabili d’ambiente richieste.</p>
-<h2 id="best">Buone pratiche</h2>
-<ul><li>Aggiungi un server alla volta e verificalo prima di passare al successivo.</li><li>Tieni i token in un password manager, non nel file JSON.</li><li>Documenta ogni server in un README del team con link e scopo.</li></ul>
+<p class="lead">Procedura passo per passo per configurare il tuo primo connettore MCP con un esempio italiano end-to-end.</p>
+<h2 id="prerequisiti">Prerequisiti</h2>
+<ul><li>Claude Desktop aggiornato all’ultima versione.</li><li>Node.js 18+ installato sul sistema.</li><li>Un account con credenziali API del servizio che vuoi connettere.</li></ul>
+<h2 id="file-config">Il file di configurazione</h2>
+<p>Su macOS il file è ~/Library/Application Support/Claude/claude_desktop_config.json. Su Windows è %APPDATA%\Claude\claude_desktop_config.json. Su Linux è ~/.config/Claude/claude_desktop_config.json.</p>
+<h2 id="esempio">Esempio completo</h2>
+<p>Per connettere Notion:</p>
+<pre><code>{
+  "mcpServers": {
+    "notion": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-notion"],
+      "env": {"NOTION_TOKEN": "secret_xxxxxxxxxxxx"}
+    }
+  }
+}</code></pre>
+<h2 id="restart">Riavvio e test</h2>
+<ol><li>Salva il file JSON.</li><li>Riavvia Claude Desktop.</li><li>Apri una nuova chat.</li><li>Chiedi: quali pagine ho su Notion? Se Claude risponde, il connettore funziona.</li></ol>
+<h2 id="debug">Debug comune</h2>
+<ul><li>Token non valido — ricontrolla la variabile d’ambiente.</li><li>Porta occupata — chiudi altri processi che usano lo stesso tool.</li><li>Errore di permessi — verifica ACL del servizio esterno.</li></ul>
 <hr>
 <p class="foot-link">Hai trovato utile questa guida? Torna all'<a href="../archivio.html">archivio completo</a> o naviga per <a href="../categorie/index.html">categoria</a>.</p>
   </article>
   <aside class="toc">
-   <h4>In questa guida</h4><a href="#sec-lead">Sintesi</a><a href="#sei">I sei server</a><a href="#ordine">Ordine di setup consigliato</a><a href="#configurazione">Pattern di configurazione</a><a href="#best">Buone pratiche</a>
+   <h4>In questa guida</h4><a href="#sec-lead">Sintesi</a><a href="#prerequisiti">Prerequisiti</a><a href="#file-config">Il file di configurazione</a><a href="#esempio">Esempio completo</a><a href="#restart">Riavvio e test</a><a href="#debug">Debug comune</a>
    <h4 style="margin-top:18px">Categoria</h4>
    <a href="../categorie/setup.html">Setup</a>
    <h4 style="margin-top:18px">Naviga</h4>

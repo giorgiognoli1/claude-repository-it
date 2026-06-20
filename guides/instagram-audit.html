@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Claude Content System: un mese di contenuti in poche ore — Claude & Claude Code | Giorgio Gnoli</title>
-<meta name="description" content="Sistema di prompting per generare un mese di contenuti per più canali con voce coerente.">
+<title>Audit del profilo Instagram con Claude — Claude & Claude Code | Giorgio Gnoli</title>
+<meta name="description" content="Procedura di audit in cinque passi per analizzare un profilo Instagram e produrre un report di miglioramento.">
 <meta name="author" content="Giorgio Gnoli">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://giorgiognoli1.github.io/claude-repository-it/guides/claude-content-system.html">
+<link rel="canonical" href="https://giorgiognoli1.github.io/claude-repository-it/guides/instagram-audit.html">
 <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
@@ -33,9 +33,9 @@
  <div class="wrap">
   <p class="breadcrumb"><a href="../index.html">Home</a> / <a href="../archivio.html">Archivio</a> / <a href="../categorie/index.html">Categorie</a> / <a href="../categorie/prompt.html">Prompt</a></p>
   <p class="kicker">Prompt · Guida operativa</p>
-  <h1>Claude Content System: un mese di contenuti in poche ore</h1>
-  <p class="lead">Sistema di prompting per generare un mese di contenuti per più canali con voce coerente.</p>
-  <p class="meta-line">A cura di Giorgio Gnoli · 4 sezioni</p>
+  <h1>Audit del profilo Instagram con Claude</h1>
+  <p class="lead">Procedura di audit in cinque passi per analizzare un profilo Instagram e produrre un report di miglioramento.</p>
+  <p class="meta-line">A cura di Giorgio Gnoli · 5 sezioni</p>
  </div>
 </section>
 
@@ -43,20 +43,35 @@
  <div class="wrap layout">
   <article class="guide">
 <h2 id="sec-lead">Sintesi</h2>
-<p class="lead">Sistema di prompting per generare un mese di contenuti per più canali con voce coerente.</p>
-<h2 id="idea">L’idea</h2>
-<p>Un mese di contenuti si fa se hai una voce coerente, un calendario editoriale e prompt modulari. Claude Content System è esattamente questo: una libreria di prompt componibili che generano contenuti riutilizzabili con la stessa voce.</p>
-<h2 id="moduli">I moduli</h2>
-<ul><li>Modulo Voce — file voice.md con tono, lunghezza media, lessico, esempi di apertura e chiusura.</li><li>Modulo Calendario — file calendar.md con i trenta argomenti del mese.</li><li>Modulo Prompt — tre template: LinkedIn post, carousel, email newsletter.</li></ul>
-<h2 id="loop">Il loop operativo</h2>
-<ol><li>Carica voice.md e l’argomento del giorno.</li><li>Scegli il template.</li><li>Genera prima bozza.</li><li>Modifica manuale di due-tre parole per ancorare la voce.</li><li>Salva in output/giorno-N-canale.md.</li><li>Dopo sette giorni, rivedi cinque output migliori e affina voice.md.</li></ol>
-<h2 id="tempo">Tempo reale</h2>
-<p>Circa tre ore per un mese di trenta contenuti su tre canali, inclusa la modifica manuale di personalizzazione. Rispetto ai cinque-otto giorni tradizionali è un risparmio dell’80%.</p>
+<p class="lead">Procedura di audit in cinque passi per analizzare un profilo Instagram e produrre un report di miglioramento.</p>
+<h2 id="raccolta">Raccolta dati</h2>
+<ol><li>Esporta gli ultimi trenta post con caption, hashtag e metriche.</li><li>Salva bio, link in bio, highlights e nome utente.</li><li>Raccogli feed di cinque competitor diretti.</li></ol>
+<h2 id="analisi">Analisi</h2>
+<p>Con i dati alla mano, chiedi a Claude l’analisi strutturata.</p>
+<pre><code>Analizza questi trenta post del profilo @xyz.
+Per ogni post: pattern di caption che funzionano, hashtag performanti,
+orari di pubblicazione, tipologia visiva ricorrente.
+Output: tabella markdown + sintesi narrativa.</code></pre>
+<h2 id="gap">Gap analysis</h2>
+<p>Chiedi a Claude di confrontare il profilo con i competitor.</p>
+<pre><code>Confronta @xyz con @abc, @def, @ghi, @jkl, @mno.
+Per ognuno: punti di forza, punti di debolezza,
+opportunità non sfruttate, minacce da trend di settore.</code></pre>
+<h2 id="piano">Piano di azione</h2>
+<p>Dai due output precedenti, chiedi un piano operativo.</p>
+<pre><code>Genera un piano di 30 giorni per @xyz.
+- settimana 1: caption
+- settimana 2: visual
+- settimana 3: hashtag
+- settimana 4: orari e collaborazioni
+Output: calendario editoriale in markdown.</code></pre>
+<h2 id="tracking">Tracking</h2>
+<p>Dopo trenta giorni, riesporta i dati e chiedi a Claude un confronto tra prima e dopo. Itera.</p>
 <hr>
 <p class="foot-link">Hai trovato utile questa guida? Torna all'<a href="../archivio.html">archivio completo</a> o naviga per <a href="../categorie/index.html">categoria</a>.</p>
   </article>
   <aside class="toc">
-   <h4>In questa guida</h4><a href="#sec-lead">Sintesi</a><a href="#idea">L’idea</a><a href="#moduli">I moduli</a><a href="#loop">Il loop operativo</a><a href="#tempo">Tempo reale</a>
+   <h4>In questa guida</h4><a href="#sec-lead">Sintesi</a><a href="#raccolta">Raccolta dati</a><a href="#analisi">Analisi</a><a href="#gap">Gap analysis</a><a href="#piano">Piano di azione</a><a href="#tracking">Tracking</a>
    <h4 style="margin-top:18px">Categoria</h4>
    <a href="../categorie/prompt.html">Prompt</a>
    <h4 style="margin-top:18px">Naviga</h4>

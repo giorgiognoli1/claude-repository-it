@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dieci agenti Claude per la finanza personale — Claude & Claude Code | Giorgio Gnoli</title>
-<meta name="description" content="Una libreria pronta di dieci agenti specializzati per budgeting, investimenti, reporting e decisioni finanziarie.">
+<meta name="description" content="Una libreria di dieci agenti specializzati per gestire le finanze personali con Claude e MCP.">
 <meta name="author" content="Giorgio Gnoli">
-<meta name="keywords" content="Claude, Claude Code, Architetture, guida italiana, Giorgio Gnoli">
-<link rel="canonical" href="https://claude.giorgiognoli.it/guides/10-agenti-finanza.html">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://giorgiognoli1.github.io/claude-repository-it/guides/10-agenti-finanza.html">
 <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
@@ -31,28 +31,47 @@
 
 <section class="category-cover">
  <div class="wrap">
-  <p class="breadcrumb"><a href="../index.html">Home</a> / <a href="../archivio.html">Archivio</a> / <a href="../categorie/index.html">Categorie</a> / <a href="../categorie/architetture.html">Architetture</a></p>
-  <p class="kicker">Architetture</p>
+  <p class="breadcrumb"><a href="../index.html">Home</a> / <a href="../archivio.html">Archivio</a> / <a href="../categorie/index.html">Categorie</a> / <a href="../categorie/prompt.html">Prompt</a></p>
+  <p class="kicker">Prompt · Guida operativa</p>
   <h1>Dieci agenti Claude per la finanza personale</h1>
-  <p class="lead">Una libreria pronta di dieci agenti specializzati per budgeting, investimenti, reporting e decisioni finanziarie.</p>
-  <p class="meta">A cura di Giorgio Gnoli · Guida operativa, licenza libera con attribuzione.</p>
+  <p class="lead">Una libreria di dieci agenti specializzati per gestire le finanze personali con Claude e MCP.</p>
+  <p class="meta-line">A cura di Giorgio Gnoli · 5 sezioni</p>
  </div>
 </section>
 
 <section>
  <div class="wrap layout">
   <article class="guide">
-   <p>I dieci agenti|1. Budget Tracker. Monitora uscite mensili, categorizza, alert su sforamenti. 2. Net Worth. Calcola patrimonio netto aggregando conti, investimenti, debiti. 3. Cash Flow. Prevedi flussi di cassa futuri su 12 mesi. 4. Investment Allocator. Suggerisce riallocazione in base a profilo di rischio. 5. Tax Helper. Identifica detrazioni e crediti d'imposta disponibili. 6. Subscription Audit. Trova abbonamenti dimenticati. 7. Goal Planner. Finanzia obiettivi (casa, pensione) calcolando rata mensile. 8. Debt Payoff. Strategia ottimale (avalanche vs snowball). 9. Report Mensile. PDF executive con KPI e grafici. 10. Alert Anomalie. Notifica se una spesa è anomala.|Come funzionano|Ogni agente è uno script Python + una Skill che definisce obiettivo, input, output, successo. Girano in locale su dati CSV/Excel che mantieni tu. Nessun dato lascia la tua macchina.|Limiti|Non gestiscono conti correnti reali (no open banking live). Non sono consulenza finanziaria certificata. Sono assistenti di ragionamento su dati che tu gli dai.|Disclaimer|Tutti gli output sono informazioni, non consigli financial ufficiali. Per scelte importanti consulta un professionista.</p>
-   <hr style="margin-top:2em;border:0;border-top:1px solid var(--border)">
-   <p style="color:var(--muted);font-size:.9rem">Hai trovato utile questa guida? Torna all'<a href="../archivio.html">archivio completo</a> o naviga per <a href="../categorie/index.html">categoria</a>.</p>
+<h2 id="sec-lead">Sintesi</h2>
+<p class="lead">Una libreria di dieci agenti specializzati per gestire le finanze personali con Claude e MCP.</p>
+<h2 id="libreria">La libreria</h2>
+<p>Dieci agenti specializzati, ciascuno con un prompt dedicato, una Skill di attivazione e un criterio di successo. Coprono il ciclo completo: dal budgeting alla pianificazione pensionistica.</p>
+<h2 id="agenti">I dieci agenti</h2>
+<ol><li>Budget agent — categorizza le spese e segnala derive.</li><li>Cashflow agent — proietta saldo tra sei mesi.</li><li>Debito agent — calcola strategia di estinzione anticipata.</li><li>Risparmio agent — suggerisce allocazione mensile.</li><li>Investimento agent — propone ETF coerenti con il profilo.</li><li>Tasse agent — evidenzia detrazioni non sfruttate.</li><li>Stipendio agent — calcola netto, rate, tredicesima.</li><li>Pensione agent — proietta TFR e contributi.</li><li>Mutuo agent — confronta tassi, calcola rata, scenari TAEG.</li><li>Report agent — genera report mensile PDF.</li></ol>
+<h2 id="setup">Setup condiviso</h2>
+<p>Tutti usano lo stesso MCP: il filesystem locale, un file finanze.xlsx e un Google Sheet condiviso via MCP. Il prompt di ogni agente fa riferimento al file.</p>
+<h2 id="skill-attivazione">Skill di attivazione</h2>
+<pre><code>---
+name: budget-agent
+description: attiva quando l'utente chiede di categorizzare spese
+oppure di analizzare il budget mensile
+---
+
+# Ruolo
+Sei il budget agent. Ricevi il file finanze.xlsx aggiornato.
+Per ogni mese: categorizza spese, evidenzia derive oltre il 10%,
+suggerisci tagli non dolorosi. Output: tabella markdown + sintesi.</code></pre>
+<h2 id="governance">Governance</h2>
+<p>Anche se gli agenti sono potenti, le decisioni finanziarie finali restano sempre umane. Verifica sempre i dati, non fidarti ciecamente. Gli agenti sono assistenti, non consulenti finanziari.</p>
+<hr>
+<p class="foot-link">Hai trovato utile questa guida? Torna all'<a href="../archivio.html">archivio completo</a> o naviga per <a href="../categorie/index.html">categoria</a>.</p>
   </article>
   <aside class="toc">
-   <h4>Indice</h4>
-   
-   <h4 style="margin-top:14px">Categoria</h4>
-   <a href="../categorie/architetture.html">Architetture</a>
-   <h4 style="margin-top:14px">Altre guide</h4>
-   <a href="../archivio.html">Archivio</a>
+   <h4>In questa guida</h4><a href="#sec-lead">Sintesi</a><a href="#libreria">La libreria</a><a href="#agenti">I dieci agenti</a><a href="#setup">Setup condiviso</a><a href="#skill-attivazione">Skill di attivazione</a><a href="#governance">Governance</a>
+   <h4 style="margin-top:18px">Categoria</h4>
+   <a href="../categorie/prompt.html">Prompt</a>
+   <h4 style="margin-top:18px">Naviga</h4>
+   <a href="../archivio.html">Archivio completo</a>
    <a href="../index.html">Home</a>
   </aside>
  </div>

@@ -6,8 +6,8 @@
 <title>Le 3 modalità di Claude Code — Claude & Claude Code | Giorgio Gnoli</title>
 <meta name="description" content="Quando usare la chat, quando entrare in Code, quando attivare la modalità agente. Differenze, limiti, esempi.">
 <meta name="author" content="Giorgio Gnoli">
-<meta name="keywords" content="Claude, Claude Code, Architetture, guida italiana, Giorgio Gnoli">
-<link rel="canonical" href="https://claude.giorgiognoli.it/guides/3-modalita-agente.html">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://giorgiognoli1.github.io/claude-repository-it/guides/3-modalita-agente.html">
 <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
@@ -32,27 +32,40 @@
 <section class="category-cover">
  <div class="wrap">
   <p class="breadcrumb"><a href="../index.html">Home</a> / <a href="../archivio.html">Archivio</a> / <a href="../categorie/index.html">Categorie</a> / <a href="../categorie/architetture.html">Architetture</a></p>
-  <p class="kicker">Architetture</p>
+  <p class="kicker">Architetture · Guida operativa</p>
   <h1>Le 3 modalità di Claude Code</h1>
   <p class="lead">Quando usare la chat, quando entrare in Code, quando attivare la modalità agente. Differenze, limiti, esempi.</p>
-  <p class="meta">A cura di Giorgio Gnoli · Guida operativa, licenza libera con attribuzione.</p>
+  <p class="meta-line">A cura di Giorgio Gnoli · 5 sezioni</p>
  </div>
 </section>
 
 <section>
  <div class="wrap layout">
   <article class="guide">
-   <p>Modalità 1. Chat pura|Interfaccia testuale, nessun tool accessibile. Ideale per brainstorming, scrittura creativa, chat di consulenza, risposta a domande puntuali. Vantaggi: massima chiarezza, zero side-effect. Limiti: niente file, niente codice, niente ricerche esterne.|Modalità 2. Code (con file system)|Claude Code può leggere e scrivere file, eseguire comandi shell, fare git. Ideale per sviluppo, refactor, code review, documentazione. Vantaggi: azioni reali sul codice. Limiti: serve supervisione umana, può rompere cose.|Modalità 3. Agente (con loop e MCP)|Claude gira in loop con obiettivo, strumenti MCP, criterio di successo, gestione errori. Lavora in autonomia finché non raggiunge il goal. Ideale per task ripetitivi e data pipeline. Vantaggi: scalabile, automatizzabile. Limiti: serve harness robusto, osservabilità, limiti di risorse.|Come scegliere|Parti sempre dalla chat pura per definire cosa vuoi. Passa in Code quando serve azione su file. Passa in agente solo se il task è ripetitivo, misurabile e ben definito. Non lanciare agenti su task vaghi o one-shot.|Esempio|Task: 'rivedi il PR #123 in modo educativo'. Modalità: Code. Task: 'rivedi tutti i PR aperti e genera un report settimanale'. Modalità: agente. Task: 'spiegami le differenze tra harness e loop'. Modalità: chat pura.</p>
-   <hr style="margin-top:2em;border:0;border-top:1px solid var(--border)">
-   <p style="color:var(--muted);font-size:.9rem">Hai trovato utile questa guida? Torna all'<a href="../archivio.html">archivio completo</a> o naviga per <a href="../categorie/index.html">categoria</a>.</p>
+<h2 id="sec-lead">Sintesi</h2>
+<p class="lead">Quando usare la chat, quando entrare in Code, quando attivare la modalità agente. Differenze, limiti, esempi.</p>
+<h2 id="chat">Modalità 1 — Chat pura</h2>
+<p>Interfaccia testuale, nessun tool accessibile. Ideale per brainstorming, scrittura creativa, chat di consulenza, risposta a domande puntuali.</p>
+<ul><li>Vantaggi — massima chiarezza, zero side-effect.</li><li>Limiti — niente file, niente codice, niente ricerche esterne.</li></ul>
+<h2 id="code">Modalità 2 — Code con file system</h2>
+<p>Claude Code può leggere e scrivere file, eseguire comandi shell, fare git. Ideale per sviluppo, refactor, code review, documentazione.</p>
+<ul><li>Vantaggi — azioni reali sul codice.</li><li>Limiti — serve supervisione umana, può rompere cose.</li></ul>
+<h2 id="loop">Modalità 3 — Agente con loop e MCP</h2>
+<p>Claude gira in loop con obiettivo, strumenti MCP, criterio di successo, gestione errori. Lavora in autonomia finché non raggiunge il goal. Ideale per task ripetitivi e data pipeline.</p>
+<ul><li>Vantaggi — scalabile, automatizzabile.</li><li>Limiti — serve harness robusto, osservabilità, limiti di risorse.</li></ul>
+<h2 id="scelta">Come scegliere</h2>
+<p>Parti sempre dalla chat pura per definire cosa vuoi. Passa in Code quando serve azione su file. Passa in agente solo se il task è ripetitivo, misurabile e ben definito. Non lanciare agenti su task vaghi o one-shot.</p>
+<h2 id="esempio">Esempio</h2>
+<ul><li>Rivedi il PR numero 123 in modo educativo → Modalità Code.</li><li>Rivedi tutti i PR aperti e genera un report settimanale → Modalità agente.</li><li>Spiegami le differenze tra harness e loop → Chat pura.</li></ul>
+<hr>
+<p class="foot-link">Hai trovato utile questa guida? Torna all'<a href="../archivio.html">archivio completo</a> o naviga per <a href="../categorie/index.html">categoria</a>.</p>
   </article>
   <aside class="toc">
-   <h4>Indice</h4>
-   
-   <h4 style="margin-top:14px">Categoria</h4>
+   <h4>In questa guida</h4><a href="#sec-lead">Sintesi</a><a href="#chat">Modalità 1 — Chat pura</a><a href="#code">Modalità 2 — Code con file system</a><a href="#loop">Modalità 3 — Agente con loop e MCP</a><a href="#scelta">Come scegliere</a><a href="#esempio">Esempio</a>
+   <h4 style="margin-top:18px">Categoria</h4>
    <a href="../categorie/architetture.html">Architetture</a>
-   <h4 style="margin-top:14px">Altre guide</h4>
-   <a href="../archivio.html">Archivio</a>
+   <h4 style="margin-top:18px">Naviga</h4>
+   <a href="../archivio.html">Archivio completo</a>
    <a href="../index.html">Home</a>
   </aside>
  </div>

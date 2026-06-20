@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Claude Content System: un mese di contenuti in poche ore — Claude & Claude Code | Giorgio Gnoli</title>
-<meta name="description" content="Sistema di prompting per generare un mese di contenuti per più canali con voce coerente.">
+<title>Prompt per generare foto con Claude Image — Claude & Claude Code | Giorgio Gnoli</title>
+<meta name="description" content="Anatomia di un prompt efficace per generazione immagini con Claude, con esempi di iterazione.">
 <meta name="author" content="Giorgio Gnoli">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://giorgiognoli1.github.io/claude-repository-it/guides/claude-content-system.html">
+<link rel="canonical" href="https://giorgiognoli1.github.io/claude-repository-it/guides/claude-prompt-per-foto.html">
 <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
@@ -33,8 +33,8 @@
  <div class="wrap">
   <p class="breadcrumb"><a href="../index.html">Home</a> / <a href="../archivio.html">Archivio</a> / <a href="../categorie/index.html">Categorie</a> / <a href="../categorie/prompt.html">Prompt</a></p>
   <p class="kicker">Prompt · Guida operativa</p>
-  <h1>Claude Content System: un mese di contenuti in poche ore</h1>
-  <p class="lead">Sistema di prompting per generare un mese di contenuti per più canali con voce coerente.</p>
+  <h1>Prompt per generare foto con Claude Image</h1>
+  <p class="lead">Anatomia di un prompt efficace per generazione immagini con Claude, con esempi di iterazione.</p>
   <p class="meta-line">A cura di Giorgio Gnoli · 4 sezioni</p>
  </div>
 </section>
@@ -43,20 +43,22 @@
  <div class="wrap layout">
   <article class="guide">
 <h2 id="sec-lead">Sintesi</h2>
-<p class="lead">Sistema di prompting per generare un mese di contenuti per più canali con voce coerente.</p>
-<h2 id="idea">L’idea</h2>
-<p>Un mese di contenuti si fa se hai una voce coerente, un calendario editoriale e prompt modulari. Claude Content System è esattamente questo: una libreria di prompt componibili che generano contenuti riutilizzabili con la stessa voce.</p>
-<h2 id="moduli">I moduli</h2>
-<ul><li>Modulo Voce — file voice.md con tono, lunghezza media, lessico, esempi di apertura e chiusura.</li><li>Modulo Calendario — file calendar.md con i trenta argomenti del mese.</li><li>Modulo Prompt — tre template: LinkedIn post, carousel, email newsletter.</li></ul>
-<h2 id="loop">Il loop operativo</h2>
-<ol><li>Carica voice.md e l’argomento del giorno.</li><li>Scegli il template.</li><li>Genera prima bozza.</li><li>Modifica manuale di due-tre parole per ancorare la voce.</li><li>Salva in output/giorno-N-canale.md.</li><li>Dopo sette giorni, rivedi cinque output migliori e affina voice.md.</li></ol>
-<h2 id="tempo">Tempo reale</h2>
-<p>Circa tre ore per un mese di trenta contenuti su tre canali, inclusa la modifica manuale di personalizzazione. Rispetto ai cinque-otto giorni tradizionali è un risparmio dell’80%.</p>
+<p class="lead">Anatomia di un prompt efficace per generazione immagini con Claude, con esempi di iterazione.</p>
+<h2 id="anatomia">Anatomia di un buon prompt</h2>
+<p>Un prompt efficace descrive cinque elementi in ordine di importanza:</p>
+<ol><li>Soggetto principale.</li><li>Ambientazione e contesto.</li><li>Luce e atmosfera.</li><li>Stile visivo.</li><li>Dettagli tecnici (inquadratura, fuoco, prospettiva).</li></ol>
+<h2 id="esempio">Esempio passo per passo</h2>
+<p>Pessimo prompt: un gatto seduto.</p>
+<p>Buon prompt: Gatto norvegese delle foreste, seduto su un davanzale di pietra in una baita di montagna. Luce morbida del tardo pomeriggio che entra da una finestra polverosa. Stile fotografia naturalistica, profondità di campo ridotta, inquadratura a tre quarti.</p>
+<h2 id="iterazione">Iterazione</h2>
+<p>Dopo il primo output modifica un solo elemento alla volta: cambia il soggetto, poi la luce, poi lo stile. Cambiare troppe cose insieme confonde.</p>
+<h2 id="checklist">Checklist finale</h2>
+<ul><li>Il soggetto è chiaramente identificabile.</li><li>L’ambientazione specifica il luogo.</li><li>La luce è descritta con tipo e direzione.</li><li>Lo stile è riconoscibile (fotografico, pittura, illustrazione).</li><li>I dettagli tecnici migliorano la qualità.</li></ul>
 <hr>
 <p class="foot-link">Hai trovato utile questa guida? Torna all'<a href="../archivio.html">archivio completo</a> o naviga per <a href="../categorie/index.html">categoria</a>.</p>
   </article>
   <aside class="toc">
-   <h4>In questa guida</h4><a href="#sec-lead">Sintesi</a><a href="#idea">L’idea</a><a href="#moduli">I moduli</a><a href="#loop">Il loop operativo</a><a href="#tempo">Tempo reale</a>
+   <h4>In questa guida</h4><a href="#sec-lead">Sintesi</a><a href="#anatomia">Anatomia di un buon prompt</a><a href="#esempio">Esempio passo per passo</a><a href="#iterazione">Iterazione</a><a href="#checklist">Checklist finale</a>
    <h4 style="margin-top:18px">Categoria</h4>
    <a href="../categorie/prompt.html">Prompt</a>
    <h4 style="margin-top:18px">Naviga</h4>
