@@ -228,3 +228,6 @@ footer a:hover{color:var(--accent);text-decoration:underline}
   article.guide{border:0;box-shadow:none;padding:0;max-width:100%}
   body{background:#fff;color:#000}
 }
+
+
+.pdf-download{margin-top:16px}.pdf-download .cta{display:inline-flex;align-items:center;gap:8px;text-decoration:none}
